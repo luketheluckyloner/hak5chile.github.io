@@ -104,66 +104,95 @@
         <h2 style="font-size: 3em; margin-bottom: 30px;">Formulario de Envío</h2>
         <p style="margin-bottom: 40px;">Ingresa tus datos para recibir tu producto en Chile.</p>
 
-        <form id="shippingForm" style="max-width: 500px; margin: 0 auto; text-align: left;">
-            <label>Nombre:</label><br>
-            <input type="text" name="nombre" required style="width: 100%; padding: 10px; margin: 10px 0; background-color: #11111168; color: #0f0; border: 1px solid #0f0;"><br>
+<form id="shippingForm" style="max-width: 500px; margin: 0 auto; text-align: left;">
+    <label>Nombre:</label><br>
+    <input type="text" name="nombre" required style="width:100%; padding:10px; margin:10px 0; background-color:#11111168; color:#0f0; border:1px solid #0f0;"><br>
 
-            <label>Dirección:</label><br>
-            <input type="text" name="direccion" required style="width: 100%; padding: 10px; margin: 10px 0; background-color: #11111164; color: #0f0; border: 1px solid #0f0;"><br>
+    <label>RUT (sin puntos ni guión):</label><br>
+    <input type="text" name="rut" required pattern="\d{7,8}[0-9kK]" title="Ingrese un RUT válido, sin puntos ni guión" style="width:100%; padding:10px; margin:10px 0; background-color:#11111168; color:#0f0; border:1px solid #0f0;"><br>
 
-            <label>Teléfono:</label><br>
-            <input type="text" name="telefono" required style="width: 100%; padding: 10px; margin: 10px 0; background-color: #11111149; color: #0f0; border: 1px solid #0f0;"><br>
+    <label>Correo electrónico:</label><br>
+    <input type="email" name="email" required style="width:100%; padding:10px; margin:10px 0; background-color:#11111168; color:#0f0; border:1px solid #0f0;"><br>
 
-            <!-- Campo oculto para tracking -->
-            <input type="hidden" name="tracking" id="trackingNumber">
+    <label>Dirección:</label><br>
+    <input type="text" name="calle" placeholder="Calle y número" required style="width:100%; padding:10px; margin:10px 0; background-color:#11111164; color:#0f0; border:1px solid #0f0;"><br>
+    <input type="text" name="comuna" placeholder="Comuna" required style="width:100%; padding:10px; margin:10px 0; background-color:#11111164; color:#0f0; border:1px solid #0f0;"><br>
+    <input type="text" name="region" placeholder="Región" required style="width:100%; padding:10px; margin:10px 0; background-color:#11111164; color:#0f0; border:1px solid #0f0;"><br>
 
-            <button type="submit" style="background-color: #0f0; color: #0000005c; font-weight: bold; padding: 15px 30px; margin-top: 20px; cursor: pointer; border: none;">Enviar</button>
-        </form>
-    </div>
-</section>
+    <label>Teléfono (+569):</label><br>
+    <input type="tel" name="telefono" required pattern="[0-9]{8}" placeholder="912345678" title="Ingrese un número de 8 dígitos, sin prefijo" style="width:100%; padding:10px; margin:10px 0; background-color:#11111149; color:#0f0; border:1px solid #0f0;"><br>
+
+    <input type="hidden" name="trackingNumber" id="trackingNumber">
+
+    <button type="submit" style="padding:10px 20px; background-color:#0f0; color:#000; border:none; cursor:pointer;">Enviar</button>
+</form>
 
 <script>
-    function generarTracking() {
-        return Math.floor(10000000 + Math.random() * 90000000);
+function generarTracking() {
+    return Math.floor(10000000 + Math.random() * 90000000);
+}
+
+function validarRut(rut) {
+    rut = rut.replace(/\s+/g, '').toLowerCase();
+    if (!/^\d{7,8}[0-9k]$/.test(rut)) return false;
+    let cuerpo = rut.slice(0, -1);
+    let dv = rut.slice(-1);
+    let suma = 0;
+    let multiplo = 2;
+    for (let i = cuerpo.length - 1; i >= 0; i--) {
+        suma += parseInt(cuerpo[i]) * multiplo;
+        multiplo = multiplo < 7 ? multiplo + 1 : 2;
+    }
+    let dvEsperado = 11 - (suma % 11);
+    dvEsperado = dvEsperado === 11 ? '0' : dvEsperado === 10 ? 'k' : dvEsperado.toString();
+    return dv === dvEsperado;
+}
+
+const form = document.getElementById('shippingForm');
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const rutInput = form.rut.value;
+    if (!validarRut(rutInput)) {
+        alert("RUT inválido.");
+        return;
     }
 
-    const form = document.getElementById('shippingForm');
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
+    const tracking = generarTracking();
+    document.getElementById('trackingNumber').value = tracking;
 
-        const tracking = generarTracking();
-        document.getElementById('trackingNumber').value = tracking;
+    const tempForm = document.createElement('form');
+    tempForm.action = 'https://formsubmit.co/abrahamleivapino@gmail.com'; // Cambia por tu correo
+    tempForm.method = 'POST';
 
-        const tempForm = document.createElement('form');
-        tempForm.action = 'https://formsubmit.co/abrahamleivapino@gmail.com'; // Reemplaza con tu correo
-        tempForm.method = 'POST';
-
-        const inputs = form.querySelectorAll('input, textarea');
-        inputs.forEach(input => {
-            const inputClone = document.createElement('input');
-            inputClone.type = 'hidden';
-            inputClone.name = input.name;
-            inputClone.value = input.value;
-            tempForm.appendChild(inputClone);
-        });
-
-        const redirectInput = document.createElement('input');
-        redirectInput.type = 'hidden';
-        redirectInput.name = '_next';
-        redirectInput.value = 'https://hak5chile.tech/gracias.html?tracking=' + tracking;
-        tempForm.appendChild(redirectInput);
-
-        const captchaInput = document.createElement('input');
-        captchaInput.type = 'hidden';
-        captchaInput.name = '_captcha';
-        captchaInput.value = 'false';
-        tempForm.appendChild(captchaInput);
-
-        document.body.appendChild(tempForm);
-        tempForm.submit();
+    const inputs = form.querySelectorAll('input, textarea');
+    inputs.forEach(input => {
+        const inputClone = document.createElement('input');
+        inputClone.type = 'hidden';
+        inputClone.name = input.name;
+        inputClone.value = input.value;
+        tempForm.appendChild(inputClone);
     });
+
+    const redirectInput = document.createElement('input');
+    redirectInput.type = 'hidden';
+    redirectInput.name = '_next';
+    redirectInput.value = 'https://hak5chile.tech/gracias.html?tracking=' + tracking;
+    tempForm.appendChild(redirectInput);
+
+    const captchaInput = document.createElement('input');
+    captchaInput.type = 'hidden';
+    captchaInput.name = '_captcha';
+    captchaInput.value = 'false';
+    tempForm.appendChild(captchaInput);
+
+    document.body.appendChild(tempForm);
+    tempForm.submit();
+});
 </script>
 
+    </div>
+</section>
 		<!-- Social -->
 		<section id="social" class="section section-3">
 			<div class="container">
