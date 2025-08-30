@@ -49,24 +49,49 @@
 			</span>
 		</nav>
 				
-		<!-- About Me -->
-		<section id="about" class="section section-1">
-			<div class="container has-text-centered">
-				<!-- Source: https://flic.kr/p/pAZBNK -->
-				<img class="avatar" src="assets/img/profile2.png">
-			</div>
-			<div class="container"></br>
-				<p class="intro">
-					Lorem Khaled Ipsum is a major key to success. To succeed you must believe. When you believe, you will succeed. Mogul talk. Find peace, life is like a water fall, you’ve gotta flow. Lion! Fan luv. Eliptical talk.
-				</p>
-			</div>
-		</section>
+		<section id="about" class="section section-1" style="position: relative; overflow: hidden;">
+    
+    <!-- Video de fondo -->
+    <video autoplay muted loop playsinline class="bg-video">
+        <source src="assets/banner.mp4" type="video/mp4">
+        Tu navegador no soporta video en HTML5.
+    </video>
+    
+    <!-- Contenido encima del video -->
+    <div class="container has-text-centered" style="position: relative; z-index: 1;">
+        <img class="avatar" src="assets/img/profile2.png">
+    </div>
+    
+    <div class="container" style="position: relative; z-index: 1;">
+        <br>
+        <p class="intro">
+            Lorem Khaled Ipsum is a major key to success. To succeed you must believe. When you believe, you will succeed. Mogul talk. Find peace, life is like a water fall, you’ve gotta flow. Lion! Fan luv. Eliptical talk.
+        </p>
+    </div>
+</section>
+
+<!-- Estilos integrados -->
+<style>
+.bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  opacity: 0.7; /* Cambia la transparencia si quieres */
+}
+</style>
 		
 		<!-- Projects -->
 		<section  id="projects" class="section section-2">
 			<div class="container">
 				<div class="has-text-centered">
-					<h3 class="title is-3">Projects</h3>
+					<h3 class="title is-3">Productos</h3>
 				</div>
 				
 				<div class="columns is-multiline is-desktop">
@@ -359,7 +384,7 @@
 		<section  id="projects" class="section section-2">
 			<div class="container">
 				<div class="has-text-centered">
-					<h3 class="title is-3">Projects</h3>
+					<h3 class="title is-3">Los mas vendidos</h3>
 				</div>
 				
 				<div class="columns is-multiline is-desktop">
@@ -410,8 +435,8 @@
     <article>
       <!-- Imagen -->
       <div>
-        <figure class="assets/img/products/pineapple.png">
-          <img src="CYD Yellow WI-FI Marauder" alt="Image">
+        <figure class="image project-figure">
+          <img src="assets/img/products/watch.png" alt="Image">
         </figure>
       </div>
 
@@ -419,18 +444,18 @@
       <div class="project-content">
         <!-- Descripción breve -->
         <p class="product-description">
-          CYD Wifi Marauder
+          DSTIKE Reloj Ataque WiFi
         </p>
 
         <!-- Texto principal -->
         <p class="centered-text">
-          Una herramienta para todos los hackers eticos.
+          DEAUTHER Watch X: reloj de desarrollo con ESP8266, antena desmontable y funciones avanzadas para pruebas y proyectos de seguridad WiFi.
         </p>
 
         <!-- Precio con opción de descuento -->
         <p class="product-price">
-          <span class="original-price">$50.000</span>
-          <span class="discounted-price">$99.000</span> <!-- Precio con descuento -->
+          <span class="original-price">$89.990</span>
+          <span class="discounted-price">$74.990</span> <!-- Precio con descuento -->
         </p>
 
         <!-- Botón -->
@@ -452,7 +477,7 @@
       <!-- Imagen -->
       <div>
         <figure class="image project-figure">
-          <img src="assets/img/project-1.jpg" alt="Image">
+          <img src="assets/img/products/hackrf.png" alt="Image">
         </figure>
       </div>
 
@@ -460,18 +485,17 @@
       <div class="project-content">
         <!-- Descripción breve -->
         <p class="product-description">
-          Flipper Zero
+          HackRF One PortaPack H2M
         </p>
 
         <!-- Texto principal -->
         <p class="centered-text">
-          Una herramienta para todos los hackers eticos.
+          PortaPack H2M Edición Exclusiva para HackRF, radio SDR portátil con pantalla táctil de 3,2”, TCXO 10 MHz, micrófono integrado, GPS simulado y soporte oficial de firmware.
         </p>
 
         <!-- Precio con opción de descuento -->
         <p class="product-price">
-          <span class="original-price">$50.000</span>
-          <span class="discounted-price">$40.000</span> <!-- Precio con descuento -->
+          <span class="discounted-price">$84.990</span> <!-- Precio con descuento -->
         </p>
 
         <!-- Botón -->
