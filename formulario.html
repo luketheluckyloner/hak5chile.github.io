@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Portfolio</title>
+	<!-- css files -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+
+	<link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
+	<meta name="author" content="Hassan Ali">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+	<body>
+		<!-- Navbar -->
+		<nav class="nav container void-background">
+			<!-- This "nav-menu" is hidden on mobile -->
+			<!-- Add the modifier "is-active" to display it on mobile -->
+			<div class="nav-left">
+				<a href="http://medium.com/@hassanhelfi/" class="nav-item">
+					<span class="icon">
+						<i class="fa fa-medium"></i>
+					</span>
+				</a>
+				<a href="http://github.com/helfi92" class="nav-item">
+					<span class="icon">
+						<i class="fa fa-github"></i>
+					</span>
+				</a>
+				<a href="https://twitter.com/hassanhelfi" class="nav-item">
+					<span class="icon">
+						<i class="fa fa-twitter"></i>
+					</span>
+				</a>				
+			</div>
+
+			<div class="nav-right nav-menu">
+				<a class="nav-item" href="#about">About</a>
+				<a class="nav-item" href="#projects">Projects</a>
+				<a class="nav-item" href="#social">Social</a>
+			</div>
+
+			<!-- This "nav-toggle" hamburger menu is only visible on mobile -->
+			<!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
+			<span class="nav-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</span>
+		</nav>
+				
+		<section id="about" class="section section-1" style="position: relative; overflow: hidden;">
+    
+    <!-- Video de fondo -->
+    <video autoplay muted loop playsinline class="bg-video">
+        <source src="assets/banner.mp4" type="video/mp4">
+        Tu navegador no soporta video en HTML5.
+    </video>
+    
+    <!-- Contenido encima del video -->
+    <div class="container has-text-centered" style="position: relative; z-index: 1;">
+        <img class="avatar" src="assets/img/profile2.png">
+    </div>
+    
+<div class="container" style="position: relative; z-index: 1; text-align: center;">
+    <br>
+    <p style="
+        font-family: 'Orbitron', sans-serif;
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #00ffcc;
+        text-shadow: 0px 0px 12px rgba(0, 255, 200, 0.8);
+        letter-spacing: 2px;
+        ">
+        Bienvenido a Namastech<br>
+        Ciberseguridad, gadgets y hardware al alcance de tu mano.
+    </p>
+</div>
+
+<!-- Fuente robótica desde Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+</section>
+
+<!-- Estilos integrados -->
+<style>
+.bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  opacity: 0.7; /* Cambia la transparencia si quieres */
+}
+</style>
+		<!-- formulario -->
+
+<section id="shipping" class="section section-4" style="background-color: #00000025; color: #0f0; font-family: 'Courier New', monospace; padding: 80px 20px;">
+    <div class="container has-text-centered">
+        <h2 style="font-size: 3em; margin-bottom: 30px;">Formulario de Envío</h2>
+        <p style="margin-bottom: 40px;">Ingresa tus datos para recibir tu producto en Chile.</p>
+
+        <form id="shippingForm" style="max-width: 500px; margin: 0 auto; text-align: left;">
+            <label>Nombre:</label><br>
+            <input type="text" name="nombre" required style="width: 100%; padding: 10px; margin: 10px 0; background-color: #11111168; color: #0f0; border: 1px solid #0f0;"><br>
+
+            <label>Dirección:</label><br>
+            <input type="text" name="direccion" required style="width: 100%; padding: 10px; margin: 10px 0; background-color: #11111164; color: #0f0; border: 1px solid #0f0;"><br>
+
+            <label>Teléfono:</label><br>
+            <input type="text" name="telefono" required style="width: 100%; padding: 10px; margin: 10px 0; background-color: #11111149; color: #0f0; border: 1px solid #0f0;"><br>
+
+            <!-- Campo oculto para tracking -->
+            <input type="hidden" name="tracking" id="trackingNumber">
+
+            <button type="submit" style="background-color: #0f0; color: #0000005c; font-weight: bold; padding: 15px 30px; margin-top: 20px; cursor: pointer; border: none;">Enviar</button>
+        </form>
+    </div>
+</section>
+
+<script>
+    function generarTracking() {
+        return Math.floor(10000000 + Math.random() * 90000000);
+    }
+
+    const form = document.getElementById('shippingForm');
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const tracking = generarTracking();
+        document.getElementById('trackingNumber').value = tracking;
+
+        const tempForm = document.createElement('form');
+        tempForm.action = 'https://formsubmit.co/TU_CORREO'; // Reemplaza con tu correo
+        tempForm.method = 'POST';
+
+        const inputs = form.querySelectorAll('input, textarea');
+        inputs.forEach(input => {
+            const inputClone = document.createElement('input');
+            inputClone.type = 'hidden';
+            inputClone.name = input.name;
+            inputClone.value = input.value;
+            tempForm.appendChild(inputClone);
+        });
+
+        const redirectInput = document.createElement('input');
+        redirectInput.type = 'hidden';
+        redirectInput.name = '_next';
+        redirectInput.value = 'https://TUUSUARIO.github.io/gracias.html?tracking=' + tracking;
+        tempForm.appendChild(redirectInput);
+
+        const captchaInput = document.createElement('input');
+        captchaInput.type = 'hidden';
+        captchaInput.name = '_captcha';
+        captchaInput.value = 'false';
+        tempForm.appendChild(captchaInput);
+
+        document.body.appendChild(tempForm);
+        tempForm.submit();
+    });
+</script>
+
+		<!-- Social -->
+		<section id="social" class="section section-3">
+			<div class="container">
+				<div class="has-text-centered">					
+					<h3 class="title is-3">Let's Socialize</h3>
+				</div>
+				<div class="social-container columns">
+					<div class="column is-6 has-text-centered">
+						<a target="_blank" href="https://ca.linkedin.com/in/hassan-ali-6132468a"><img class="" src="assets/img/linkedin.png"></a>
+					</div>
+					<div class="column is-6 has-text-centered">
+						<a target="_blank" href="https://www.facebook.com/Hassan.Helfi"><img class="" src="assets/img/facebook.png"></a>
+					</div>
+				</div>
+			</div>
+		</section>	
+		
+		<!-- Footer -->
+		<section class="section-4 has-text-centered container">
+			<a href="http://www.hassanali.me/about">Hassan Ali</a>
+		</section>
+		
+		<!-- Scripts  -->
+		<script src="controller.js"></script>		
+	</body>	
+</html>
