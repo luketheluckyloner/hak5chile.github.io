@@ -104,7 +104,7 @@ a.nav-item:hover {
 	.nav-toggle span:hover {
 		background-color: #fff;
 	}
-	/* --- PRODUCTO --- */
+	
 .section-product {
   background-color: #0d0d0d;
   padding: 3rem 1.5rem;
@@ -187,4 +187,3 @@ a.nav-item:hover {
   right: 10px;
 }
 
-}
