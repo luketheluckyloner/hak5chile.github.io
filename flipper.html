@@ -97,26 +97,22 @@
   opacity: 0.7; /* Cambia la transparencia si quieres */
 }
 </style>
-		<!-- TERMINA EL HEADER -->		
 
-		<!-- AQUI IRA UNA PAGINA INDIVIDUAL PARA CADA PRODUCTO -->
-<section class="section section-product">
-  <div class="container">
-    <div class="columns is-vcentered">
-
-      <!-- Carrusel de imágenes -->
-      <div class="column is-6">
-        <div class="carousel">
-          <div class="carousel-images">
+  <!-- Product section -->
+  <section class="section section-product">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <!-- Carousel -->
+        <div class="column is-6">
+          <div class="carousel">
+            <div class="carousel-images">
             <img src="assets/img/products/catnugget.png" class="active">
             <img src="assets/img/products/catnugget2.png">
             <img src="assets/img/products/catnugget3.webp">
+            </div>
+            <button class="carousel-btn prev">&#10094;</button>
+            <button class="carousel-btn next">&#10095;</button>
           </div>
-          <button class="carousel-btn prev">&#10094;</button>
-          <button class="carousel-btn next">&#10095;</button>
-        </div>
-      </div>
-		
 
           <!-- Precio -->
           <div class="product-price has-text-centered" style="margin-top: 15px;">
@@ -126,106 +122,147 @@
 
           <!-- Botón de pago -->
           <div class="centered-button has-text-centered" style="margin-top: 15px;">
-            <script src="https://www.mercadopago.cl/integrations/v1/web-payment-checkout.js"
-              data-preference-id="2646395895-3a0ac64d-35f0-4e2c-a82a-470d24f13d1a"
-              data-source="button">
-            </script>
+           <script src="https://www.mercadopago.cl/integrations/v1/web-payment-checkout.js"
+            data-preference-id="2646395895-3a0ac64d-35f0-4e2c-a82a-470d24f13d1a" data-source="button">
+           </script>
           </div>
         </div>
 
-	  
-      <!-- Información del producto -->
-      <div class="column is-6">
-        <h1 class="title is-2 product-title">HakCat Nugget</h1>
-        <p class="product-presentation">
-          El <strong>Wi-Fi HakCat Nugget</strong> es un microcontrolador basado en ESP8266,
-          completamente ensamblado y probado. Incluye pantalla, botones, headers y
-          placa D1 mini, listo para usars con Arduino IDE o MicroPython.
-          Preinstalado con <em>Nugget Deauther Firmware</em>.
-        </p>
+        <!-- Product Info -->
+        <div class="column is-6">
+          <h1 class="title is-2 product-title">HakCat WiFI Nugget</h1>
+          <p class="product-presentation">
+            El <strong>Wi-Fi Nugget</strong> es un microcontrolador basado en ESP8266,
+            completamente ensamblado y probado. Incluye pantalla, botones, headers y
+            placa D1 mini, listo para usar con Arduino IDE o MicroPython.
+            Preinstalado con <em>Nugget Deauther Firmware</em>.
+          </p>
 
-        <h2 class="title is-4 product-subtitle">Incluye</h2>
-        <ul class="product-features">
-          <li>Microcontrolador Wi-Fi Nugget con pantalla y botones</li>
-          <li>Cable Micro USB de alta calidad</li>
-          <li>Acceso al curso "Wi-Fi Self Defense" en Udemy</li>
-          <li>Guía de inicio rápido en <a href="https://www.nugget.dev" target="_blank">nugget.dev</a></li>
-        </ul>
+          <h2 class="title is-4 product-subtitle">Incluye</h2>
+          <ul class="product-features">
+            <li>Microcontrolador Wi-Fi Nugget con pantalla y botones</li>
+            <li>Cable Micro USB de alta calidad</li>
+            <li>Acceso al curso "Wi-Fi Self Defense" en Udemy</li>
+            <li>Guía de inicio rápido en <a href="https://www.nugget.dev" target="_blank">nugget.dev</a></li>
+          </ul>
 
-        <h2 class="title is-4 product-subtitle">Aprende y explora</h2>
-        <ul class="product-features">
-          <li>Crear redes falsas y páginas de phishing (con fines educativos)</li>
-          <li>Analizar e investigar redes Wi-Fi</li>
-          <li>Proyectos prácticos como Deauther, SSDP Phisher y detección de ataques</li>
-        </ul>
+          <h2 class="title is-4 product-subtitle">Aprende y explora</h2>
+          <ul class="product-features">
+            <li>Crear redes falsas y páginas de phishing (con fines educativos)</li>
+            <li>Analizar e investigar redes Wi-Fi</li>
+            <li>Proyectos prácticos como Deauther, SSDP Phisher y detección de ataques</li>
+          </ul>
 
-        <h2 class="title is-4 product-subtitle">Comunidad y soporte</h2>
-        <ul class="product-features">
-          <li>Actualizaciones de firmware desde el navegador</li>
-          <li>Acceso a la comunidad en Discord</li>
-        </ul>
+          <h2 class="title is-4 product-subtitle">Comunidad y soporte</h2>
+          <ul class="product-features">
+            <li>Actualizaciones de firmware desde el navegador</li>
+            <li>Acceso a la comunidad en Discord</li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- Footer -->
+  <section id="social" class="section section-3">
+    <div class="container">
+      <div class="has-text-centered">         
+        <h3 class="title is-3">Let's Socialize</h3>
+      </div>
+      <div class="social-container columns">
+        <div class="column is-6 has-text-centered">
+          <a target="_blank" href="https://ca.linkedin.com/in/hassan-ali-6132468a">
+            <img src="/assets/img/linkedin.png">
+          </a>
+        </div>
+        <div class="column is-6 has-text-centered">
+          <a target="_blank" href="https://www.facebook.com/Hassan.Helfi">
+            <img src="/assets/img/facebook.png">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>  
+  
+  <section class="section-4 has-text-centered container">
+    <a href="http://www.hassanali.me/about">Hassan Ali</a>
+  </section>
 
-
-
-
-		<!-- AQUI COMIENZA EL FOOTER -->
-		<section id="social" class="section section-3">
-			<div class="container">
-				<div class="has-text-centered">					
-					<h3 class="title is-3">Let's Socialize</h3>
-				</div>
-				<div class="social-container columns">
-					<div class="column is-6 has-text-centered">
-						<a target="_blank" href="https://ca.linkedin.com/in/hassan-ali-6132468a"><img class="" src="assets/img/linkedin.png"></a>
-					</div>
-					<div class="column is-6 has-text-centered">
-						<a target="_blank" href="https://www.facebook.com/Hassan.Helfi"><img class="" src="assets/img/facebook.png"></a>
-					</div>
-				</div>
-			</div>
-		</section>	
-		
-		<!-- Footer -->
-		<section class="section-4 has-text-centered container">
-			<a href="http://www.hassanali.me/about">Hassan Ali</a>
-		</section>
-		
-		<!-- Scripts  -->
-		<script src="controller.js"></script>	
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const carousels = document.querySelectorAll(".carousel");
-
-  carousels.forEach(carousel => {
-    const images = carousel.querySelectorAll("img");
-    const prevBtn = carousel.querySelector(".prev");
-    const nextBtn = carousel.querySelector(".next");
-    let currentIndex = 0;
-
-    function showImage(index) {
-      images.forEach((img, i) => {
-        img.classList.toggle("active", i === index);
-      });
+  <!-- Styles -->
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: black;
+      color: white;
     }
+    .bg-video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: 0;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      opacity: 0.7;
+    }
+    .carousel {
+      position: relative;
+      overflow: hidden;
+    }
+    .carousel-images img {
+      display: none;
+      width: 100%;
+      height: auto;
+    }
+    .carousel-images img.active {
+      display: block;
+    }
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
+    .carousel-btn.prev { left: 10px; }
+    .carousel-btn.next { right: 10px; }
+  </style>
 
-    prevBtn.addEventListener("click", () => {
-      currentIndex = (currentIndex - 1 + images.length) % images.length;
+  <!-- Carousel script -->
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const carousels = document.querySelectorAll(".carousel");
+    carousels.forEach(carousel => {
+      const images = carousel.querySelectorAll(".carousel-images img");
+      const prevBtn = carousel.querySelector(".prev");
+      const nextBtn = carousel.querySelector(".next");
+      let currentIndex = 0;
+
+      function showImage(index) {
+        images.forEach((img, i) => {
+          img.classList.toggle("active", i === index);
+        });
+      }
+      prevBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(currentIndex);
+      });
+      nextBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+      });
       showImage(currentIndex);
     });
-
-    nextBtn.addEventListener("click", () => {
-      currentIndex = (currentIndex + 1) % images.length;
-      showImage(currentIndex);
-    });
-
-    showImage(currentIndex);
   });
-});
-</script>	
-	</body>	
+  </script>
+</body> 
 </html>
