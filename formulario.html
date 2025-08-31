@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Portfolio</title>
+	<title>Formulario de Envio - NAMASTECH</title>
 	<!-- css files -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.min.css">
@@ -99,33 +99,7 @@
 </style>
 		<!-- formulario -->
 
-<section id="shipping" class="section section-4" style="background-color: #00000025; color: #0f0; font-family: 'Courier New', monospace; padding: 80px 20px;">
-    <div class="container has-text-centered">
-        <h2 style="font-size: 3em; margin-bottom: 30px;">Formulario de Envío</h2>
-        <p style="margin-bottom: 40px;">Ingresa tus datos para recibir tu producto en Chile.</p>
-
-<form id="shippingForm" style="max-width: 500px; margin: 0 auto; text-align: left;">
-    <label>Nombre:</label><br>
-    <input type="text" name="nombre" required style="width:100%; padding:10px; margin:10px 0; background-color:#11111168; color:#0f0; border:1px solid #0f0;"><br>
-
-    <label>RUT (sin puntos ni guión):</label><br>
-    <input type="text" name="rut" required pattern="\d{7,8}[0-9kK]" title="Ingrese un RUT válido, sin puntos ni guión" style="width:100%; padding:10px; margin:10px 0; background-color:#11111168; color:#0f0; border:1px solid #0f0;"><br>
-
-    <label>Correo electrónico:</label><br>
-    <input type="email" name="email" required style="width:100%; padding:10px; margin:10px 0; background-color:#11111168; color:#0f0; border:1px solid #0f0;"><br>
-
-    <label>Dirección:</label><br>
-    <input type="text" name="calle" placeholder="Calle y número" required style="width:100%; padding:10px; margin:10px 0; background-color:#11111164; color:#0f0; border:1px solid #0f0;"><br>
-    <input type="text" name="comuna" placeholder="Comuna" required style="width:100%; padding:10px; margin:10px 0; background-color:#11111164; color:#0f0; border:1px solid #0f0;"><br>
-    <input type="text" name="region" placeholder="Región" required style="width:100%; padding:10px; margin:10px 0; background-color:#11111164; color:#0f0; border:1px solid #0f0;"><br>
-
-    <label>Teléfono (+569):</label><br>
-    <input type="tel" name="telefono" required pattern="[0-9]{8}" placeholder="912345678" title="Ingrese un número de 8 dígitos, sin prefijo" style="width:100%; padding:10px; margin:10px 0; background-color:#11111149; color:#0f0; border:1px solid #0f0;"><br>
-
-    <input type="hidden" name="trackingNumber" id="trackingNumber">
-
-    <button type="submit" style="padding:10px 20px; background-color:#0f0; color:#000; border:none; cursor:pointer;">Enviar</button>
-</form>
+ <iframe id="JotFormIFrame-252418043229655" title="Datos de Envio" onload="window.parent.scrollTo(0,0)" allowtransparency="true" allow="geolocation; microphone; camera; fullscreen; payment" src="https://form.jotform.com/252418043229655" frameborder="0" style="min-width:100%;max-width:100%;height:539px;border:none;" scrolling="no" > </iframe> <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script> <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-252418043229655']", "https://form.jotform.com/")</script> 
 
 <script>
 function generarTracking() {
