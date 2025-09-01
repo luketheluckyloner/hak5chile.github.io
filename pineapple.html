@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WiFi Pineapple</title>
+	<!-- css files -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+
+	<link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
+	<meta name="author" content="Hassan Ali">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+	<body>
+		<!-- Navbar -->
+		<nav class="nav container void-background">
+			<!-- This "nav-menu" is hidden on mobile -->
+			<!-- Add the modifier "is-active" to display it on mobile -->
+			<div class="nav-left">
+				<a href="http://medium.com/@hassanhelfi/" class="nav-item">
+					<span class="icon">
+						<i class="fa fa-medium"></i>
+					</span>
+				</a>
+				<a href="http://github.com/helfi92" class="nav-item">
+					<span class="icon">
+						<i class="fa fa-github"></i>
+					</span>
+				</a>
+				<a href="https://twitter.com/hassanhelfi" class="nav-item">
+					<span class="icon">
+						<i class="fa fa-twitter"></i>
+					</span>
+				</a>				
+			</div>
+
+			<div class="nav-right nav-menu">
+				<a class="nav-item" href="#about">About</a>
+				<a class="nav-item" href="#projects">Projects</a>
+				<a class="nav-item" href="#social">Social</a>
+			</div>
+
+			<!-- This "nav-toggle" hamburger menu is only visible on mobile -->
+			<!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
+			<span class="nav-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</span>
+		</nav>
+				
+		<section id="about" class="section section-1" style="position: relative; overflow: hidden;">
+    
+    <!-- Video de fondo -->
+    <video autoplay muted loop playsinline class="bg-video">
+        <source src="assets/banner.mp4" type="video/mp4">
+        Tu navegador no soporta video en HTML5.
+    </video>
+    
+    <!-- Contenido encima del video -->
+    <div class="container has-text-centered" style="position: relative; z-index: 1;">
+        <img class="avatar" src="assets/img/profile2.png">
+    </div>
+    
+<div class="container" style="position: relative; z-index: 1; text-align: center;">
+    <br>
+    <p style="
+        font-family: 'Orbitron', sans-serif;
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #00ffcc;
+        text-shadow: 0px 0px 12px rgba(0, 255, 200, 0.8);
+        letter-spacing: 2px;
+        ">
+        Bienvenido a Namastech<br>
+        Ciberseguridad, gadgets y hardware al alcance de tu mano.
+    </p>
+</div>
+
+<!-- Fuente robótica desde Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+</section>
+
+<!-- Estilos integrados -->
+<style>
+.bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  opacity: 0.7; /* Cambia la transparencia si quieres */
+}
+</style>
+
+  <!-- Product section -->
+<section class="section section-product">
+  <div class="container">
+    <div class="columns is-vcentered">
+      <!-- Carousel -->
+      <div class="column is-6">
+        <div class="carousel">
+          <div class="carousel-images">
+            <img src="assets/img/products/pineapple1.png" class="active">
+            <img src="assets/img/products/pineapple2.jpg">
+            <img src="assets/img/products/pineapple3.webp">
+          </div>
+          <button class="carousel-btn prev">&#10094;</button>
+          <button class="carousel-btn next">&#10095;</button>
+        </div>
+
+        <!-- Precio -->
+        <div class="product-price has-text-centered" style="margin-top: 15px;">
+          <h2 class="title is-4" style="margin-bottom: 5px;">$249.000 CLP</h2>
+          <p style="font-size: 0.9em; color: #666;">Envío gratis a todo Chile*</p>
+        </div>
+
+        <!-- Botón de pago -->
+        <div class="centered-button has-text-centered" style="margin-top: 15px;">
+         <script src="https://www.mercadopago.cl/integrations/v1/web-payment-checkout.js"
+          data-preference-id="2646395895-3a0ac64d-35f0-4e2c-a82a-470d24f13d1a" data-source="button">
+         </script>
+        </div>
+      </div>
+
+      <!-- Product Info -->
+      <div class="column is-6">
+        <h1 class="title is-2 product-title">WiFi Pineapple Mark VII</h1>
+        <p class="product-presentation">
+          La <strong>WiFi Pineapple</strong> es la herramienta más avanzada para
+          auditorías inalámbricas y pruebas de penetración en redes WiFi. Con una
+          interfaz intuitiva y campañas automatizadas, permite identificar
+          vulnerabilidades, ejecutar ataques de <em>Man-in-the-Middle</em> y generar
+          reportes profesionales con un solo clic.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- Extra Product Description -->
+
+<section class="section section-product">
+
+  <!-- Extra Product Description -->
+  <div class="columns is-centered">
+    <div class="column is-6 has-text-centered">
+
+<h1 class="title is-2 product-title">Incluye</h1>
+<p class="product-presentation">
+  La <strong>WiFi Pineapple Mark VII</strong> viene con todo lo necesario para auditorías inalámbricas:
+  compatibilidad con adaptador <strong>MK7AC Dual-Band</strong>, una interfaz web intuitiva y multiplataforma,
+  además de integración con <strong>Hak5 Cloud C²</strong> para gestión remota y simulaciones persistentes.
+</p>
+
+<h1 class="title is-2 product-title">Funciones principales</h1>
+<p class="product-presentation">
+  Su <strong>PineAP Suite</strong> permite imitar redes preferidas para ataques MITM,
+  realizar ataques WPA y WPA-Enterprise con captura de credenciales, aplicar filtros
+  de SSID y MAC para un pentest controlado, ejecutar reconocimiento avanzado del
+  entorno inalámbrico y crear campañas automatizadas con reportes personalizados.
+</p>
+
+<h1 class="title is-2 product-title">Nuevo en versión 2.0</h1>
+<p class="product-presentation">
+  La última actualización añade compatibilidad <strong>Dual-Band 2.4 + 5 GHz</strong>, 
+  captura automática de handshakes, ataques WPA-Enterprise mejorados, un firewall 
+  integrado en la interfaz web y más de 50 correcciones y nuevas funciones para
+  optimizar tus pruebas de seguridad.
+</p>
+
+      <!-- Section 3 -->
+
+
+    </div>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <section id="social" class="section section-3">
+    <div class="container">
+      <div class="has-text-centered">         
+        <h3 class="title is-3">Let's Socialize</h3>
+      </div>
+      <div class="social-container columns">
+        <div class="column is-6 has-text-centered">
+          <a target="_blank" href="https://ca.linkedin.com/in/hassan-ali-6132468a">
+            <img src="/assets/img/linkedin.png">
+          </a>
+        </div>
+        <div class="column is-6 has-text-centered">
+          <a target="_blank" href="https://www.facebook.com/Hassan.Helfi">
+            <img src="/assets/img/facebook.png">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>  
+  
+  <section class="section-4 has-text-centered container">
+    <a href="http://www.hassanali.me/about">Hassan Ali</a>
+  </section>
+
+  <!-- Styles -->
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: black;
+      color: white;
+    }
+    .bg-video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: 0;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      opacity: 0.7;
+    }
+    .carousel {
+      position: relative;
+      overflow: hidden;
+    }
+    .carousel-images img {
+      display: none;
+      width: 100%;
+      height: auto;
+    }
+    .carousel-images img.active {
+      display: block;
+    }
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
+    .carousel-btn.prev { left: 10px; }
+    .carousel-btn.next { right: 10px; }
+  </style>
+
+  <!-- Carousel script -->
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const carousels = document.querySelectorAll(".carousel");
+    carousels.forEach(carousel => {
+      const images = carousel.querySelectorAll(".carousel-images img");
+      const prevBtn = carousel.querySelector(".prev");
+      const nextBtn = carousel.querySelector(".next");
+      let currentIndex = 0;
+
+      function showImage(index) {
+        images.forEach((img, i) => {
+          img.classList.toggle("active", i === index);
+        });
+      }
+      prevBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(currentIndex);
+      });
+      nextBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+      });
+      showImage(currentIndex);
+    });
+  });
+  </script>
+</body> 
+</html>
