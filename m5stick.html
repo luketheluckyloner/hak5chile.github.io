@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>HakCat Wifi Nugget - Namastech</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="/assets/img/favicon.png">
+
+  <!-- External CSS libraries -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.min.css">
+
+  <!-- Google Fonts (correct placement) -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="nav container void-background">
+    <div class="nav-left">
+      <a href="http://medium.com/@hassanhelfi/" class="nav-item">
+        <span class="icon"><i class="fa fa-medium"></i></span>
+      </a>
+      <a href="http://github.com/helfi92" class="nav-item">
+        <span class="icon"><i class="fa fa-github"></i></span>
+      </a>
+      <a href="https://twitter.com/hassanhelfi" class="nav-item">
+        <span class="icon"><i class="fa fa-twitter"></i></span>
+      </a>       
+    </div>
+
+    <div class="nav-right nav-menu">
+      <a class="nav-item" href="#about">About</a>
+      <a class="nav-item" href="#projects">Projects</a>
+      <a class="nav-item" href="#social">Social</a>
+    </div>
+    <span class="nav-toggle">
+      <span></span><span></span><span></span>
+    </span>
+  </nav>
+        
+  <!-- Hero section with background video -->
+  <section id="about" class="section section-1">
+    <video autoplay muted loop playsinline class="bg-video">
+        <source src="/assets/banner.mp4" type="video/mp4">
+        Tu navegador no soporta video en HTML5.
+    </video>
+    
+    <div class="container has-text-centered" style="position: relative; z-index: 1;">
+        <img class="avatar" src="/assets/img/profile2.png">
+    </div>
+    
+    <div class="container" style="position: relative; z-index: 1; text-align: center;">
+        <br>
+        <p style="
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #00ffcc;
+            text-shadow: 0px 0px 12px rgba(0, 255, 200, 0.8);
+            letter-spacing: 2px;
+        ">
+          Bienvenido a Namastech<br>
+          Ciberseguridad, gadgets y hardware al alcance de tu mano.
+        </p>
+    </div>
+  </section>
+
+  <!-- Product section -->
+<section class="section section-product">
+  <div class="container">
+    <div class="columns is-vcentered">
+      <!-- Carousel -->
+      <div class="column is-6">
+        <div class="carousel">
+          <div class="carousel-images">
+            <img src="assets/img/products/m5stickplus.webp" class="active">
+            <img src="assets/img/products/m5stickplus2.webp">
+            <img src="assets/img/products/m5stickplus3.webp">
+          </div>
+          <button class="carousel-btn prev">&#10094;</button>
+          <button class="carousel-btn next">&#10095;</button>
+        </div>
+
+        <!-- Precio -->
+        <div class="product-price has-text-centered" style="margin-top: 15px;">
+          <h2 class="title is-4" style="margin-bottom: 5px;">$45.000 CLP</h2>
+          <p style="font-size: 0.9em; color: #666;">Envío gratis a todo Chile*</p>
+        </div>
+
+        <!-- Botón de pago -->
+        <div class="centered-button has-text-centered" style="margin-top: 15px;">
+         <script src="https://www.mercadopago.cl/integrations/v1/web-payment-checkout.js"
+data-preference-id="2646395895-65bcc330-898f-4065-8a72-68f690afaf28" data-source="button">
+</script>
+        </div>
+      </div>
+
+      <!-- Product Info -->
+      <div class="column is-6">
+        <h1 class="title is-2 product-title">M5StickC PLUS</h1>
+        <p class="product-presentation">
+          El <strong>M5StickC PLUS</strong> es una versión mejorada del M5StickC original, 
+          basado en <strong>ESP32-PICO-D4 con Wi-Fi</strong> y una pantalla más grande. 
+          Este dispositivo compacto y portátil está diseñado para ser fácil de usar y 
+          de código abierto, permitiéndote acelerar tus proyectos IoT con una experiencia 
+          de desarrollo más simple.
+        </p>
+
+        <h2 class="title is-4 product-subtitle">Incluye</h2>
+        <ul class="product-features">
+          <li>1x M5StickC Plus</li>
+        </ul>
+
+        <h2 class="title is-4 product-subtitle">Características principales</h2>
+        <ul class="product-features">
+          <li>ESP32 con Wi-Fi integrado</li>
+          <li>Pantalla LCD de 1.14” (135x240)</li>
+          <li>Batería de 120 mAh recargable</li>
+          <li>Micrófono, LED rojo, IR, Buzzer</li>
+          <li>Sensor IMU de 6 ejes</li>
+          <li>RTC y PMU integrados</li>
+          <li>Botones configurables</li>
+          <li>Puerto Type-C y conector GROVE</li>
+          <li>Compatible con UIFlow, MicroPython, Arduino, .NET nanoFramework</li>
+        </ul>
+
+        <h2 class="title is-4 product-subtitle">Aplicaciones</h2>
+        <ul class="product-features">
+          <li>Controlador IoT</li>
+          <li>Dispositivos portátiles (wearables)</li>
+          <li>Educación STEM</li>
+          <li>Proyectos DIY</li>
+          <li>Kits de desarrollo IoT</li>
+        </ul>
+
+        <h2 class="title is-4 product-subtitle">Especificaciones</h2>
+        <ul class="product-features">
+          <li><strong>CPU:</strong> ESP32 dual core 240MHz, 520KB SRAM</li>
+          <li><strong>Memoria Flash:</strong> 4MB</li>
+          <li><strong>Alimentación:</strong> 5V @ 500mA (USB Type-C)</li>
+          <li><strong>Conectores:</strong> GROVE (I2C/UART/IO)</li>
+          <li><strong>IMU:</strong> MPU6886</li>
+          <li><strong>RTC:</strong> BM8563</li>
+          <li><strong>PMU:</strong> AXP192</li>
+          <li><strong>Dimensiones:</strong> 48.2 x 25.5 x 13.7 mm</li>
+          <li><strong>Peso neto:</strong> 15g</li>
+          <li><strong>Rango de temperatura:</strong> 0°C a 60°C</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <section id="social" class="section section-3">
+    <div class="container">
+      <div class="has-text-centered">         
+        <h3 class="title is-3">Let's Socialize</h3>
+      </div>
+      <div class="social-container columns">
+        <div class="column is-6 has-text-centered">
+          <a target="_blank" href="https://ca.linkedin.com/in/hassan-ali-6132468a">
+            <img src="/assets/img/linkedin.png">
+          </a>
+        </div>
+        <div class="column is-6 has-text-centered">
+          <a target="_blank" href="https://www.facebook.com/Hassan.Helfi">
+            <img src="/assets/img/facebook.png">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>  
+  
+  <section class="section-4 has-text-centered container">
+    <a href="http://www.hassanali.me/about">Hassan Ali</a>
+  </section>
+
+  <!-- Styles -->
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: black;
+      color: white;
+    }
+    .bg-video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: 0;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      opacity: 0.7;
+    }
+    .carousel {
+      position: relative;
+      overflow: hidden;
+    }
+    .carousel-images img {
+      display: none;
+      width: 100%;
+      height: auto;
+    }
+    .carousel-images img.active {
+      display: block;
+    }
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
+    .carousel-btn.prev { left: 10px; }
+    .carousel-btn.next { right: 10px; }
+  </style>
+
+  <!-- Carousel script -->
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const carousels = document.querySelectorAll(".carousel");
+    carousels.forEach(carousel => {
+      const images = carousel.querySelectorAll(".carousel-images img");
+      const prevBtn = carousel.querySelector(".prev");
+      const nextBtn = carousel.querySelector(".next");
+      let currentIndex = 0;
+
+      function showImage(index) {
+        images.forEach((img, i) => {
+          img.classList.toggle("active", i === index);
+        });
+      }
+      prevBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(currentIndex);
+      });
+      nextBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+      });
+      showImage(currentIndex);
+    });
+  });
+  </script>
+</body> 
+</html>
