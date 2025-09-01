@@ -1,72 +1,74 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-  <title>HakCat Wifi Nugget - Namastech</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="/assets/img/favicon.png">
+	<title>NAMASTECH</title>
+	<!-- css files -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 
-  <!-- External CSS libraries -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.min.css">
-
-  <!-- Google Fonts (correct placement) -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="/assets/css/styles.css">
+	<link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
+	<meta name="author" content="Abraham Leiva">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
-  <!-- Navbar -->
-  <nav class="nav container void-background">
-    <div class="nav-left">
-      <a href="http://medium.com/@hassanhelfi/" class="nav-item">
-        <span class="icon"><i class="fa fa-medium"></i></span>
-      </a>
-      <a href="http://github.com/helfi92" class="nav-item">
-        <span class="icon"><i class="fa fa-github"></i></span>
-      </a>
-      <a href="https://twitter.com/hassanhelfi" class="nav-item">
-        <span class="icon"><i class="fa fa-twitter"></i></span>
-      </a>       
-    </div>
+	<body>
+		<!-- Navbar -->
+		<nav class="nav container void-background">
+			<!-- This "nav-menu" is hidden on mobile -->
+			<!-- Add the modifier "is-active" to display it on mobile -->
+			<div class="nav-left">
+		<a href="http://github.com/hak5" class="nav-item">
+					<span class="icon">
+						<i class="fa fa-github"></i>
+					</span>	
+			</div>
 
-    <div class="nav-right nav-menu">
-      <a class="nav-item" href="#about">About</a>
-      <a class="nav-item" href="#projects">Projects</a>
-      <a class="nav-item" href="#social">Social</a>
-    </div>
-    <span class="nav-toggle">
-      <span></span><span></span><span></span>
-    </span>
-  </nav>
-        
-  <!-- Hero section with background video -->
-  <section id="about" class="section section-1">
+			<div class="nav-right nav-menu">
+				<a class="nav-item" href="index.html">Inicio</a>
+				<a class="nav-item" href="about.html">Quienes somos</a>
+				<a class="nav-item" href="contacto.html">Contactanos</a>
+			</div>
+
+			<!-- This "nav-toggle" hamburger menu is only visible on mobile -->
+			<!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
+			<span class="nav-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</span>
+		</nav>
+				
+		<section id="about" class="section section-1" style="position: relative; overflow: hidden;">
+    
+    <!-- Video de fondo -->
     <video autoplay muted loop playsinline class="bg-video">
-        <source src="/assets/banner.mp4" type="video/mp4">
+        <source src="assets/banner.mp4" type="video/mp4">
         Tu navegador no soporta video en HTML5.
     </video>
     
+    <!-- Contenido encima del video -->
     <div class="container has-text-centered" style="position: relative; z-index: 1;">
-        <img class="avatar" src="/assets/img/profile2.png">
+        <img class="avatar" src="assets/img/profile2.png">
     </div>
     
-    <div class="container" style="position: relative; z-index: 1; text-align: center;">
-        <br>
-        <p style="
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #00ffcc;
-            text-shadow: 0px 0px 12px rgba(0, 255, 200, 0.8);
-            letter-spacing: 2px;
+<div class="container" style="position: relative; z-index: 1; text-align: center;">
+    <br>
+    <p style="
+        font-family: 'Orbitron', sans-serif;
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #00ffcc;
+        text-shadow: 0px 0px 12px rgba(0, 255, 200, 0.8);
+        letter-spacing: 2px;
         ">
-          Bienvenido a Namastech<br>
-          Ciberseguridad, gadgets y hardware al alcance de tu mano.
-        </p>
-    </div>
-  </section>
+        Bienvenido a Namastech<br>
+        Ciberseguridad, gadgets y hardware al alcance de tu mano.
+    </p>
+</div>
+
+<!-- Fuente robótica desde Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+</section>
 
   <!-- Product section -->
 <section class="section section-product">
@@ -109,6 +111,12 @@ data-preference-id="2646395895-65bcc330-898f-4065-8a72-68f690afaf28" data-source
           de desarrollo más simple.
         </p>
 
+<section class="section section-product">
+
+  <!-- Extra Product Description -->
+  <div class="columns is-centered">
+    <div class="column is-6 has-text-centered">
+        
         <h2 class="title is-4 product-subtitle">Incluye</h2>
         <ul class="product-features">
           <li>1x M5StickC Plus</li>
