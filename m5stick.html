@@ -70,6 +70,23 @@
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
 </section>
 
+<!-- Estilos integrados -->
+<style>
+.bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  opacity: 0.7; /* Cambia la transparencia si quieres */
+}
+</style>
+
   <!-- Product section -->
 <section class="section section-product">
   <div class="container">
@@ -94,12 +111,13 @@
 
         <!-- Botón de pago -->
         <div class="centered-button has-text-centered" style="margin-top: 15px;">
-         <script src="https://www.mercadopago.cl/integrations/v1/web-payment-checkout.js"
-data-preference-id="2646395895-65bcc330-898f-4065-8a72-68f690afaf28" data-source="button">
-</script>
-        
+          <script src="https://www.mercadopago.cl/integrations/v1/web-payment-checkout.js"
+            data-preference-id="2646395895-65bcc330-898f-4065-8a72-68f690afaf28" data-source="button">
+          </script>
+        </div>
+      </div>
 
-      <!-- Product Info -->
+      <!-- Product Info (solo la primera parte) -->
       <div class="column is-6">
         <h1 class="title is-2 product-title">M5StickC PLUS</h1>
         <p class="product-presentation">
@@ -109,24 +127,19 @@ data-preference-id="2646395895-65bcc330-898f-4065-8a72-68f690afaf28" data-source
           de código abierto, permitiéndote acelerar tus proyectos IoT con una experiencia 
           de desarrollo más simple.
         </p>
-		</div>
       </div>
-	</section>
-		  
-<section class="section section-product">
+    </div>
 
-  <!-- Extra Product Description -->
-  <div class="columns is-centered">
-    <div class="column is-6 has-text-centered">
-
-        
-        <h1 class="title is-2 product-title">Incluye</h2>
-        <ul class="product-features">
+    <!-- DESDE AQUI: Sección centrada -->
+    <div class="columns is-centered" style="margin-top: 40px;">
+      <div class="column is-one-third has-text-centered">
+        <h2 class="title is-4 product-subtitle">Incluye</h2>
+        <ul class="product-features has-text-left">
           <li>1x M5StickC Plus</li>
         </ul>
 
-        <h1 class="title is-2 product-title">Características principales</h2>
-        <ul class="product-features">
+        <h2 class="title is-4 product-subtitle">Características principales</h2>
+        <ul class="product-features has-text-left">
           <li>ESP32 con Wi-Fi integrado</li>
           <li>Pantalla LCD de 1.14” (135x240)</li>
           <li>Batería de 120 mAh recargable</li>
@@ -138,8 +151,8 @@ data-preference-id="2646395895-65bcc330-898f-4065-8a72-68f690afaf28" data-source
           <li>Compatible con UIFlow, MicroPython, Arduino, .NET nanoFramework</li>
         </ul>
 
-        <h1 class="title is-2 product-title">Aplicaciones</h2>
-        <ul class="product-features">
+        <h2 class="title is-4 product-subtitle">Aplicaciones</h2>
+        <ul class="product-features has-text-left">
           <li>Controlador IoT</li>
           <li>Dispositivos portátiles (wearables)</li>
           <li>Educación STEM</li>
@@ -147,8 +160,8 @@ data-preference-id="2646395895-65bcc330-898f-4065-8a72-68f690afaf28" data-source
           <li>Kits de desarrollo IoT</li>
         </ul>
 
-        <h1 class="title is-2 product-title">Especificaciones</h2>
-        <ul class="product-features">
+        <h2 class="title is-4 product-subtitle">Especificaciones</h2>
+        <ul class="product-features has-text-left">
           <li><strong>CPU:</strong> ESP32 dual core 240MHz, 520KB SRAM</li>
           <li><strong>Memoria Flash:</strong> 4MB</li>
           <li><strong>Alimentación:</strong> 5V @ 500mA (USB Type-C)</li>
@@ -164,6 +177,7 @@ data-preference-id="2646395895-65bcc330-898f-4065-8a72-68f690afaf28" data-source
     </div>
   </div>
 </section>
+
 
   <!-- Footer -->
   <section id="social" class="section section-3">
