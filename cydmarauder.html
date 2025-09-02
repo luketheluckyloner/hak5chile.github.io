@@ -36,9 +36,9 @@
 			</div>
 
 			<div class="nav-right nav-menu">
-				<a class="nav-item" href="#about">About</a>
-				<a class="nav-item" href="#projects">Projects</a>
-				<a class="nav-item" href="#social">Social</a>
+				<a class="nav-item" href="#about">QUIENES SOMOS</a>
+				<a class="nav-item" href="#projects">CONTACTANOS</a>
+				<a class="nav-item" href="#social">MAYORISTAS</a>
 			</div>
 
 			<!-- This "nav-toggle" hamburger menu is only visible on mobile -->
@@ -98,6 +98,8 @@
   opacity: 0.7; /* Cambia la transparencia si quieres */
 }
 </style>
+
+    <!-- AQUI SE ACABA EL HEADER Y EMPIEZA EL PRODUCTO  AQUI SE ACABA EL HEADER Y EMPIEZA EL PRODUCTO    -->
 
   <!-- Product section -->
 <section class="section section-product">
@@ -189,105 +191,54 @@ data-preference-id="2646395895-4bdd38d9-1ea0-4154-82bd-0691d70d4b89" data-source
 </section>
 
   <!-- Footer -->
-  <section id="social" class="section section-3">
+  <footer class="footer has-background-black has-text-white">
     <div class="container">
-      <div class="has-text-centered">         
-        <h3 class="title is-3">Let's Socialize</h3>
+      <div class="columns">
+
+        <!-- Columna 1 -->
+        <div class="column has-text-centered">
+          <h3 class="title is-5 has-text-white">QUIÉNES SOMOS</h3>
+          <p class="is-size-6">
+            En <strong>Namastech</strong> acercamos la ciberseguridad, gadgets y hardware 
+            al alcance de todos, combinando innovación con aprendizaje.
+          </p>
+        </div>
+
+        <!-- Columna 2 -->
+        <div class="column has-text-centered">
+          <h3 class="title is-5 has-text-white">CONTÁCTANOS</h3>
+          <p class="is-size-6">📧 contacto@namastech</p>
+          <p class="is-size-6">📱 +56 9 3558 4876</p>
+        </div>
+
+        <!-- Columna 3 -->
+        <div class="column has-text-centered">
+          <h3 class="title is-5 has-text-white">PRODUCTOS</h3>
+          <ul style="list-style:none; padding:0;">
+            <li><a href="catnugget.html" class="has-text-white">WiFi Nugget</a></li>
+            <li><a href="flipper.html" class="has-text-white">Flipper Zero</a></li>
+            <li><a href="pineapple.html" class="has-text-white">WiFi Pineapple</a></li>
+            <li><a href="portapack.html" class="has-text-white">PortaPack H2</a></li>
+          </ul>
+        </div>
+
       </div>
-      <div class="social-container columns">
-        <div class="column is-6 has-text-centered">
-          <a target="_blank" href="https://ca.linkedin.com/in/hassan-ali-6132468a">
-            <img src="/assets/img/linkedin.png">
-          </a>
-        </div>
-        <div class="column is-6 has-text-centered">
-          <a target="_blank" href="https://www.facebook.com/Hassan.Helfi">
-            <img src="/assets/img/facebook.png">
-          </a>
-        </div>
+
+      <!-- Mapa -->
+      <div class="has-text-centered" style="margin-top: 30px;">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330.4567116433087!2d-70.64848092350427!3d-33.437109495057404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c5a64024a7af%3A0x4d0773f9d3a4fe0!2sEnrique%20Mac%20Iver%20412%2C%20Santiago%2C%20Chile!5e0!3m2!1ses!2scl!4v1693939542335!5m2!1ses!2scl" 
+          width="100%" 
+          height="300" 
+          style="border:0; border-radius: 10px;" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+      </div>
+
+      <!-- Línea final -->
+      <div class="has-text-centered" style="margin-top: 20px;">
+        <p class="is-size-7">&copy; 2025 Namastech - Todos los derechos reservados</p>
       </div>
     </div>
-  </section>  
-  
-  <section class="section-4 has-text-centered container">
-    <a href="http://www.hassanali.me/about">Hassan Ali</a>
-  </section>
-
-  <!-- Styles -->
-  <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      background: black;
-      color: white;
-    }
-    .bg-video {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      min-width: 100%;
-      min-height: 100%;
-      width: auto;
-      height: auto;
-      z-index: 0;
-      transform: translate(-50%, -50%);
-      object-fit: cover;
-      opacity: 0.7;
-    }
-    .carousel {
-      position: relative;
-      overflow: hidden;
-    }
-    .carousel-images img {
-      display: none;
-      width: 100%;
-      height: auto;
-    }
-    .carousel-images img.active {
-      display: block;
-    }
-    .carousel-btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(0,0,0,0.5);
-      color: white;
-      border: none;
-      padding: 10px;
-      cursor: pointer;
-      font-size: 1.5rem;
-    }
-    .carousel-btn.prev { left: 10px; }
-    .carousel-btn.next { right: 10px; }
-  </style>
-
-  <!-- Carousel script -->
-  <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const carousels = document.querySelectorAll(".carousel");
-    carousels.forEach(carousel => {
-      const images = carousel.querySelectorAll(".carousel-images img");
-      const prevBtn = carousel.querySelector(".prev");
-      const nextBtn = carousel.querySelector(".next");
-      let currentIndex = 0;
-
-      function showImage(index) {
-        images.forEach((img, i) => {
-          img.classList.toggle("active", i === index);
-        });
-      }
-      prevBtn.addEventListener("click", () => {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        showImage(currentIndex);
-      });
-      nextBtn.addEventListener("click", () => {
-        currentIndex = (currentIndex + 1) % images.length;
-        showImage(currentIndex);
-      });
-      showImage(currentIndex);
-    });
-  });
-  </script>
-</body> 
-</html>
+  </footer>
