@@ -1,32 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>WiFi Pineapple - NAMASTECH</title>
+	<title>WiFi Pineapple</title>
 	<!-- css files -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/product-style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 
 	<link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
-	<meta name="author" content="Abraham Leiva">
+	<meta name="author" content="Hassan Ali">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 	<body>
 		<!-- Navbar -->
 		<nav class="nav container void-background">
 			<!-- This "nav-menu" is hidden on mobile -->
 			<!-- Add the modifier "is-active" to display it on mobile -->
 			<div class="nav-left">
-		<a href="http://github.com/hak5" class="nav-item">
+				<a href="http://medium.com/@hassanhelfi/" class="nav-item">
+					<span class="icon">
+						<i class="fa fa-medium"></i>
+					</span>
+				</a>
+				<a href="http://github.com/helfi92" class="nav-item">
 					<span class="icon">
 						<i class="fa fa-github"></i>
-					</span>	
+					</span>
+				</a>
+				<a href="https://twitter.com/hassanhelfi" class="nav-item">
+					<span class="icon">
+						<i class="fa fa-twitter"></i>
+					</span>
+				</a>				
 			</div>
 
 			<div class="nav-right nav-menu">
-				<a class="nav-item" href="index.html">Inicio</a>
-				<a class="nav-item" href="about.html">Quienes somos</a>
-				<a class="nav-item" href="contacto.html">Contactanos</a>
+				<a class="nav-item" href="#about">About</a>
+				<a class="nav-item" href="#projects">Projects</a>
+				<a class="nav-item" href="#social">Social</a>
 			</div>
 
 			<!-- This "nav-toggle" hamburger menu is only visible on mobile -->
@@ -86,7 +99,7 @@
   opacity: 0.7; /* Cambia la transparencia si quieres */
 }
 </style>
-
+<div class="product-wrapper">
   <!-- Product section -->
 <section class="section section-product">
   <div class="container">
@@ -105,15 +118,15 @@
 
         <!-- Precio -->
         <div class="product-price has-text-centered" style="margin-top: 15px;">
-          <h2 class="title is-4" style="margin-bottom: 5px;">$249.990 CLP</h2>
+          <h2 class="title is-4" style="margin-bottom: 5px;">$249.000 CLP</h2>
           <p style="font-size: 0.9em; color: #666;">Envío gratis a todo Chile*</p>
         </div>
 
         <!-- Botón de pago -->
         <div class="centered-button has-text-centered" style="margin-top: 15px;">
          <script src="https://www.mercadopago.cl/integrations/v1/web-payment-checkout.js"
-data-preference-id="2646395895-e274802d-c7df-45cd-a997-45fea0656dc0" data-source="button">
-</script>
+          data-preference-id="2646395895-3a0ac64d-35f0-4e2c-a82a-470d24f13d1a" data-source="button">
+         </script>
         </div>
       </div>
 
@@ -131,10 +144,11 @@ data-preference-id="2646395895-e274802d-c7df-45cd-a997-45fea0656dc0" data-source
     </div>
   </div>
 </section>
+</div>
   <!-- Extra Product Description -->
 
 <section class="section section-product">
-
+<div class="product-wrapper">
   <!-- Extra Product Description -->
   <div class="columns is-centered">
     <div class="column is-6 has-text-centered">
@@ -170,29 +184,58 @@ data-preference-id="2646395895-e274802d-c7df-45cd-a997-45fea0656dc0" data-source
 </section>
 
   <!-- Footer -->
-  <section id="social" class="section section-3">
+  <footer class="footer" style="background-color:#1a1f2b; color:white;">
     <div class="container">
-      <div class="has-text-centered">         
-        <h3 class="title is-3">Conozcamonos</h3>
+      <div class="columns">
+
+        <!-- Columna 1 -->
+        <div class="column has-text-centered">
+          <h3 class="title is-5 has-text-white">QUIÉNES SOMOS</h3>
+          <p class="is-size-6">
+            En <strong>Namastech</strong> acercamos la ciberseguridad, gadgets y hardware 
+            al alcance de todos, combinando innovación con aprendizaje.
+          </p>
+        </div>
+
+        <!-- Columna 2 -->
+        <div class="column has-text-centered">
+          <h3 class="title is-5 has-text-white">CONTÁCTANOS</h3>
+          <p class="is-size-6">📧 contacto@namastech</p>
+          <p class="is-size-6">📱 +56 9 3558 4876</p>
+        </div>
+
+        <!-- Columna 3 -->
+        <div class="column has-text-centered">
+          <h3 class="title is-5 has-text-white">PRODUCTOS</h3>
+          <ul style="list-style:none; padding:0;">
+            <li><a href="catnugget.html" class="has-text-white">WiFi Nugget</a></li>
+            <li><a href="flipper.html" class="has-text-white">Flipper Zero</a></li>
+            <li><a href="pineapple.html" class="has-text-white">WiFi Pineapple</a></li>
+            <li><a href="portapack.html" class="has-text-white">PortaPack H2</a></li>
+          </ul>
+        </div>
+
       </div>
-      <div class="social-container columns">
-        <div class="column is-6 has-text-centered">
-          <a target="_blank" href="https://ca.linkedin.com/in/hassan-ali-6132468a">
-            <img src="/assets/img/linkedin.png">
-          </a>
-        </div>
-        <div class="column is-6 has-text-centered">
-          <a target="_blank" href="https://www.facebook.com/Hassan.Helfi">
-            <img src="/assets/img/facebook.png">
-          </a>
-        </div>
+
+      <!-- Mapa -->
+      <div class="has-text-centered" style="margin-top: 30px;">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330.4567116433087!2d-70.64848092350427!3d-33.437109495057404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c5a64024a7af%3A0x4d0773f9d3a4fe0!2sEnrique%20Mac%20Iver%20412%2C%20Santiago%2C%20Chile!5e0!3m2!1ses!2scl!4v1693939542335!5m2!1ses!2scl" 
+          width="100%" 
+          height="300" 
+          style="border:0; border-radius: 10px;" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+      </div>
+
+      <!-- Línea final -->
+      <div class="has-text-centered" style="margin-top: 20px;">
+        <p class="is-size-7">&copy; 2025 Namastech - Todos los derechos reservados</p>
       </div>
     </div>
-  </section>  
-  
-  <section class="section-4 has-text-centered container">
-    <a href="http://www.hassanali.me/about">Hassan Ali</a>
-  </section>
+  </footer>
+
 
   <!-- Styles -->
   <style>
