@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>M5Stick 2 Plus Deauther</title>
+	<title>M5Stick C Plus</title>
 	<!-- css files -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.min.css">
@@ -89,122 +89,161 @@
 
   <!-- Product section -->
 <section class="section section-product">
-  <div class="custom-bg">
-    <div class="container">
-      <div class="columns is-vcentered">
-        <!-- Carousel -->
-        <div class="column is-6">
-          <div class="carousel">
-            <div class="carousel-images">
-              <img src="assets/img/products/m5stickplus.webp" class="active">
-              <img src="assets/img/products/m5stickplus2.webp">
-              <img src="assets/img/products/m5stickplus3.webp">
-            </div>
-            <button class="carousel-btn prev">&#10094;</button>
-            <button class="carousel-btn next">&#10095;</button>
+  <div class="container">
+    <div class="columns is-vcentered">
+      <!-- Carousel -->
+      <div class="column is-6">
+        <div class="carousel">
+          <div class="carousel-images">
+            <img src="assets/img/products/m5stickplus.webp" class="active">
+            <img src="assets/img/products/m5stickplus2.webp">
+            <img src="assets/img/products/m5stickplus3.webp">
           </div>
+          <button class="carousel-btn prev">&#10094;</button>
+          <button class="carousel-btn next">&#10095;</button>
+        </div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const carousels = document.querySelectorAll(".carousel");
 
-          <!-- Precio -->
-          <div class="product-price has-text-centered" style="margin-top: 15px;">
-            <h2 class="title is-4" style="margin-bottom: 5px;">$45.000 CLP</h2>
-            <p style="font-size: 0.9em; color: #ccc;">Envío gratis a todo Chile*</p>
-          </div>
+  carousels.forEach(carousel => {
+    const images = carousel.querySelectorAll(".carousel-images img");
+    const prevBtn = carousel.querySelector(".carousel-btn.prev");
+    const nextBtn = carousel.querySelector(".carousel-btn.next");
 
-          <!-- Botón de pago -->
-          <div class="centered-button has-text-centered" style="margin-top: 15px;">
-            <script src="https://www.mercadopago.cl/integrations/v1/web-payment-checkout.js"
-              data-preference-id="2646395895-65bcc330-898f-4065-8a72-68f690afaf28" data-source="button">
-            </script>
-          </div>
+    let currentIndex = 0;
+
+    function showImage(index) {
+      images.forEach((img, i) => {
+        img.classList.toggle("active", i === index);
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(currentIndex);
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+      });
+    }
+
+    // Autoplay (opcional, cada 4s)
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
+    }, 4000);
+
+    // Mostrar la primera imagen al cargar
+    showImage(currentIndex);
+  });
+});
+</script>
+        <!-- Precio -->
+        <div class="product-price has-text-centered" style="margin-top: 15px;">
+          <h2 class="title is-4" style="margin-bottom: 5px;">$45.000 CLP</h2>
+          <p style="font-size: 0.9em; color: #666;">Envío gratis a todo Chile*</p>
         </div>
 
-        <!-- Product Info -->
-        <div class="column is-6">
-          <h1 class="title is-2 product-title">M5StickC PLUS</h1>
-          <p class="product-presentation">
-            El <strong>M5StickC PLUS</strong> es una versión mejorada del M5StickC original, 
-            basado en <strong>ESP32-PICO-D4 con Wi-Fi</strong> y una pantalla más grande. 
-            Este dispositivo compacto y portátil está diseñado para ser fácil de usar y 
-            de código abierto, permitiéndote acelerar tus proyectos IoT con una experiencia 
-            de desarrollo más simple.
-          </p>
+        <!-- Botón de pago -->
+        <div class="centered-button has-text-centered" style="margin-top: 15px;">
+          <script src="https://www.mercadopago.cl/integrations/v1/web-payment-checkout.js"
+            data-preference-id="2646395895-65bcc330-898f-4065-8a72-68f690afaf28" data-source="button">
+          </script>
         </div>
       </div>
 
-      <!-- DESDE AQUI: Sección centrada -->
-      <div class="columns is-centered" style="margin-top: 40px;">
-
-        <!-- Columna izquierda -->
-        <div class="column is-half has-text-centered">
-          <h2 class="title is-4 product-subtitle">Incluye</h2>
-          <ul class="product-features has-text-left">
-            <li>1x M5StickC Plus</li>
-          </ul>
-
-          <h2 class="title is-4 product-subtitle">Características principales</h2>
-          <ul class="product-features has-text-left">
-            <li>ESP32 con Wi-Fi integrado</li>
-            <li>Pantalla LCD de 1.14” (135x240)</li>
-            <li>Batería de 120 mAh recargable</li>
-            <li>Micrófono, LED rojo, IR, Buzzer</li>
-            <li>Sensor IMU de 6 ejes</li>
-          </ul>
-
-          <h2 class="title is-4 product-subtitle">Aplicaciones</h2>
-          <ul class="product-features has-text-left">
-            <li>Controlador IoT</li>
-            <li>Dispositivos portátiles (wearables)</li>
-            <li>Educación STEM</li>
-          </ul>
-        </div>
-
-        <!-- Columna derecha -->
-        <div class="column is-half has-text-centered">
-          <h2 class="title is-4 product-subtitle">Características principales (cont.)</h2>
-          <ul class="product-features has-text-left">
-            <li>RTC y PMU integrados</li>
-            <li>Botones configurables</li>
-            <li>Puerto Type-C y conector GROVE</li>
-            <li>Compatible con UIFlow, MicroPython, Arduino, .NET nanoFramework</li>
-          </ul>
-
-          <h2 class="title is-4 product-subtitle">Aplicaciones (cont.)</h2>
-          <ul class="product-features has-text-left">
-            <li>Proyectos DIY</li>
-            <li>Kits de desarrollo IoT</li>
-          </ul>
-
-          <h2 class="title is-4 product-subtitle">Especificaciones</h2>
-          <ul class="product-features has-text-left">
-            <li><strong>CPU:</strong> ESP32 dual core 240MHz, 520KB SRAM</li>
-            <li><strong>Memoria Flash:</strong> 4MB</li>
-            <li><strong>Alimentación:</strong> 5V @ 500mA (USB Type-C)</li>
-            <li><strong>Conectores:</strong> GROVE (I2C/UART/IO)</li>
-            <li><strong>IMU:</strong> MPU6886</li>
-            <li><strong>RTC:</strong> BM8563</li>
-            <li><strong>PMU:</strong> AXP192</li>
-            <li><strong>Dimensiones:</strong> 48.2 x 25.5 x 13.7 mm</li>
-            <li><strong>Peso neto:</strong> 15g</li>
-            <li><strong>Rango de temperatura:</strong> 0°C a 60°C</li>
-          </ul>
-        </div>
+      <!-- Product Info (solo la primera parte) -->
+      <div class="column is-6">
+        <h1 class="title is-2 product-title">M5StickC PLUS</h1>
+        <p class="product-presentation">
+          El <strong>M5StickC PLUS</strong> es una versión mejorada del M5StickC original, 
+          basado en <strong>ESP32-PICO-D4 con Wi-Fi</strong> y una pantalla más grande. 
+          Este dispositivo compacto y portátil está diseñado para ser fácil de usar y 
+          de código abierto, permitiéndote acelerar tus proyectos IoT con una experiencia 
+          de desarrollo más simple.
+        </p>
       </div>
     </div>
+
+    <!-- DESDE AQUI: Sección centrada -->
+<div class="columns is-centered" style="margin-top: 40px;">
+
+  <!-- Columna izquierda -->
+  <div class="column is-half has-text-centered">
+    <h2 class="title is-4 product-subtitle">Incluye</h2>
+    <ul class="product-features has-text-left">
+      <li>1x M5StickC Plus</li>
+    </ul>
+
+    <h2 class="title is-4 product-subtitle">Características principales</h2>
+    <ul class="product-features has-text-left">
+      <li>ESP32 con Wi-Fi integrado</li>
+      <li>Pantalla LCD de 1.14” (135x240)</li>
+      <li>Batería de 120 mAh recargable</li>
+      <li>Micrófono, LED rojo, IR, Buzzer</li>
+      <li>Sensor IMU de 6 ejes</li>
+    </ul>
+
+    <h2 class="title is-4 product-subtitle">Aplicaciones</h2>
+    <ul class="product-features has-text-left">
+      <li>Controlador IoT</li>
+      <li>Dispositivos portátiles (wearables)</li>
+      <li>Educación STEM</li>
+    </ul>
+  </div>
+
+  <!-- Columna derecha -->
+  <div class="column is-half has-text-centered">
+    <h2 class="title is-4 product-subtitle">Características principales (cont.)</h2>
+    <ul class="product-features has-text-left">
+      <li>RTC y PMU integrados</li>
+      <li>Botones configurables</li>
+      <li>Puerto Type-C y conector GROVE</li>
+      <li>Compatible con UIFlow, MicroPython, Arduino, .NET nanoFramework</li>
+    </ul>
+
+    <h2 class="title is-4 product-subtitle">Aplicaciones (cont.)</h2>
+    <ul class="product-features has-text-left">
+      <li>Proyectos DIY</li>
+      <li>Kits de desarrollo IoT</li>
+    </ul>
+
+    <h2 class="title is-4 product-subtitle">Especificaciones</h2>
+    <ul class="product-features has-text-left">
+      <li><strong>CPU:</strong> ESP32 dual core 240MHz, 520KB SRAM</li>
+      <li><strong>Memoria Flash:</strong> 4MB</li>
+      <li><strong>Alimentación:</strong> 5V @ 500mA (USB Type-C)</li>
+      <li><strong>Conectores:</strong> GROVE (I2C/UART/IO)</li>
+      <li><strong>IMU:</strong> MPU6886</li>
+      <li><strong>RTC:</strong> BM8563</li>
+      <li><strong>PMU:</strong> AXP192</li>
+      <li><strong>Dimensiones:</strong> 48.2 x 25.5 x 13.7 mm</li>
+      <li><strong>Peso neto:</strong> 15g</li>
+      <li><strong>Rango de temperatura:</strong> 0°C a 60°C</li>
+    </ul>
+  </div>
+
+</div>
   </div>
 </section>
-
 <!-- CSS -->
 <style>
   body {
-    background-color: #000; /* Negro a los lados */
+    background-color: #000; /* Mantiene los lados en negro */
   }
 
   .custom-bg {
-    background-color: #0b3d4a; /* Azul verdoso oscuro */
+    background-color: #0a3d46; /* Azul verdoso oscuro */
     border-radius: 12px;
     padding: 30px;
-    margin: 0 auto;
-    width: 85%; /* Franja más angosta para dejar negro en los lados */
+    margin: 20px auto;
+    width: 80%; /* Ajusta el ancho de la franja */
   }
 
   .product-presentation {
@@ -216,6 +255,89 @@
   }
 </style>
 
+  <!-- Footer -->
+<!-- CSS -->
+
+
+
+  <!-- Footer -->
+
+<style>
+  .carousel {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .carousel-images img {
+    width: 100%;
+    flex-shrink: 0;
+    display: none;
+  }
+
+  .carousel-images img.active {
+    display: block;
+  }
+
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0 10px;
+    border-radius: 5px;
+  }
+
+  .carousel-btn.prev {
+    left: 10px;
+  }
+
+  .carousel-btn.next {
+    right: 10px;
+  }
+</style>
+
+<script>
+  const images = document.querySelectorAll('.carousel-images img');
+  const prevBtn = document.querySelector('.carousel-btn.prev');
+  const nextBtn = document.querySelector('.carousel-btn.next');
+
+  let currentIndex = 0;
+
+  function showImage(index) {
+    images.forEach((img, i) => {
+      img.classList.toggle('active', i === index);
+    });
+  }
+
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+  });
+
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+  });
+
+  // Optional: autoplay every 4s
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+  }, 4000);
+
+  // Show the first image on load
+  showImage(currentIndex);
+</script>
 
   <!-- Footer -->
   <!-- Footer -->
