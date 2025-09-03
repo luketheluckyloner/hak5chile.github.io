@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>NAMASTECH</title>
+	<title>M5Stick Pro C Deauther</title>
 	<!-- css files -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.min.css">
@@ -89,210 +89,184 @@
 
   <!-- Product section -->
 <section class="section section-product">
-  <div class="container">
-    <div class="columns is-vcentered">
-      <!-- Carousel -->
-      <div class="column is-6">
-        <div class="carousel">
-          <div class="carousel-images">
-            <img src="assets/img/products/m5stickplus.webp" class="active">
-            <img src="assets/img/products/m5stickplus2.webp">
-            <img src="assets/img/products/m5stickplus3.webp">
+  <div class="custom-bg">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <!-- Carousel -->
+        <div class="column is-6">
+          <div class="carousel">
+            <div class="carousel-images">
+              <img src="assets/img/products/m5stickplus.webp" class="active">
+              <img src="assets/img/products/m5stickplus2.webp">
+              <img src="assets/img/products/m5stickplus3.webp">
+            </div>
+            <button class="carousel-btn prev">&#10094;</button>
+            <button class="carousel-btn next">&#10095;</button>
           </div>
-          <button class="carousel-btn prev">&#10094;</button>
-          <button class="carousel-btn next">&#10095;</button>
+
+          <!-- Precio -->
+          <div class="product-price has-text-centered" style="margin-top: 15px;">
+            <h2 class="title is-4" style="margin-bottom: 5px;">$45.000 CLP</h2>
+            <p style="font-size: 0.9em; color: #ccc;">Envío gratis a todo Chile*</p>
+          </div>
+
+          <!-- Botón de pago -->
+          <div class="centered-button has-text-centered" style="margin-top: 15px;">
+            <script src="https://www.mercadopago.cl/integrations/v1/web-payment-checkout.js"
+              data-preference-id="2646395895-65bcc330-898f-4065-8a72-68f690afaf28" data-source="button">
+            </script>
+          </div>
         </div>
 
-        <!-- Precio -->
-        <div class="product-price has-text-centered" style="margin-top: 15px;">
-          <h2 class="title is-4" style="margin-bottom: 5px;">$45.000 CLP</h2>
-          <p style="font-size: 0.9em; color: #666;">Envío gratis a todo Chile*</p>
-        </div>
-
-        <!-- Botón de pago -->
-        <div class="centered-button has-text-centered" style="margin-top: 15px;">
-          <script src="https://www.mercadopago.cl/integrations/v1/web-payment-checkout.js"
-            data-preference-id="2646395895-65bcc330-898f-4065-8a72-68f690afaf28" data-source="button">
-          </script>
+        <!-- Product Info -->
+        <div class="column is-6">
+          <h1 class="title is-2 product-title">M5StickC PLUS</h1>
+          <p class="product-presentation">
+            El <strong>M5StickC PLUS</strong> es una versión mejorada del M5StickC original, 
+            basado en <strong>ESP32-PICO-D4 con Wi-Fi</strong> y una pantalla más grande. 
+            Este dispositivo compacto y portátil está diseñado para ser fácil de usar y 
+            de código abierto, permitiéndote acelerar tus proyectos IoT con una experiencia 
+            de desarrollo más simple.
+          </p>
         </div>
       </div>
 
-      <!-- Product Info (solo la primera parte) -->
-      <div class="column is-6">
-        <h1 class="title is-2 product-title">M5StickC PLUS</h1>
-        <p class="product-presentation">
-          El <strong>M5StickC PLUS</strong> es una versión mejorada del M5StickC original, 
-          basado en <strong>ESP32-PICO-D4 con Wi-Fi</strong> y una pantalla más grande. 
-          Este dispositivo compacto y portátil está diseñado para ser fácil de usar y 
-          de código abierto, permitiéndote acelerar tus proyectos IoT con una experiencia 
-          de desarrollo más simple.
-        </p>
+      <!-- DESDE AQUI: Sección centrada -->
+      <div class="columns is-centered" style="margin-top: 40px;">
+
+        <!-- Columna izquierda -->
+        <div class="column is-half has-text-centered">
+          <h2 class="title is-4 product-subtitle">Incluye</h2>
+          <ul class="product-features has-text-left">
+            <li>1x M5StickC Plus</li>
+          </ul>
+
+          <h2 class="title is-4 product-subtitle">Características principales</h2>
+          <ul class="product-features has-text-left">
+            <li>ESP32 con Wi-Fi integrado</li>
+            <li>Pantalla LCD de 1.14” (135x240)</li>
+            <li>Batería de 120 mAh recargable</li>
+            <li>Micrófono, LED rojo, IR, Buzzer</li>
+            <li>Sensor IMU de 6 ejes</li>
+          </ul>
+
+          <h2 class="title is-4 product-subtitle">Aplicaciones</h2>
+          <ul class="product-features has-text-left">
+            <li>Controlador IoT</li>
+            <li>Dispositivos portátiles (wearables)</li>
+            <li>Educación STEM</li>
+          </ul>
+        </div>
+
+        <!-- Columna derecha -->
+        <div class="column is-half has-text-centered">
+          <h2 class="title is-4 product-subtitle">Características principales (cont.)</h2>
+          <ul class="product-features has-text-left">
+            <li>RTC y PMU integrados</li>
+            <li>Botones configurables</li>
+            <li>Puerto Type-C y conector GROVE</li>
+            <li>Compatible con UIFlow, MicroPython, Arduino, .NET nanoFramework</li>
+          </ul>
+
+          <h2 class="title is-4 product-subtitle">Aplicaciones (cont.)</h2>
+          <ul class="product-features has-text-left">
+            <li>Proyectos DIY</li>
+            <li>Kits de desarrollo IoT</li>
+          </ul>
+
+          <h2 class="title is-4 product-subtitle">Especificaciones</h2>
+          <ul class="product-features has-text-left">
+            <li><strong>CPU:</strong> ESP32 dual core 240MHz, 520KB SRAM</li>
+            <li><strong>Memoria Flash:</strong> 4MB</li>
+            <li><strong>Alimentación:</strong> 5V @ 500mA (USB Type-C)</li>
+            <li><strong>Conectores:</strong> GROVE (I2C/UART/IO)</li>
+            <li><strong>IMU:</strong> MPU6886</li>
+            <li><strong>RTC:</strong> BM8563</li>
+            <li><strong>PMU:</strong> AXP192</li>
+            <li><strong>Dimensiones:</strong> 48.2 x 25.5 x 13.7 mm</li>
+            <li><strong>Peso neto:</strong> 15g</li>
+            <li><strong>Rango de temperatura:</strong> 0°C a 60°C</li>
+          </ul>
+        </div>
       </div>
     </div>
-
-    <!-- DESDE AQUI: Sección centrada -->
-<div class="columns is-centered" style="margin-top: 40px;">
-
-  <!-- Columna izquierda -->
-  <div class="column is-half has-text-centered">
-    <h2 class="title is-4 product-subtitle">Incluye</h2>
-    <ul class="product-features has-text-left">
-      <li>1x M5StickC Plus</li>
-    </ul>
-
-    <h2 class="title is-4 product-subtitle">Características principales</h2>
-    <ul class="product-features has-text-left">
-      <li>ESP32 con Wi-Fi integrado</li>
-      <li>Pantalla LCD de 1.14” (135x240)</li>
-      <li>Batería de 120 mAh recargable</li>
-      <li>Micrófono, LED rojo, IR, Buzzer</li>
-      <li>Sensor IMU de 6 ejes</li>
-    </ul>
-
-    <h2 class="title is-4 product-subtitle">Aplicaciones</h2>
-    <ul class="product-features has-text-left">
-      <li>Controlador IoT</li>
-      <li>Dispositivos portátiles (wearables)</li>
-      <li>Educación STEM</li>
-    </ul>
-  </div>
-
-  <!-- Columna derecha -->
-  <div class="column is-half has-text-centered">
-    <h2 class="title is-4 product-subtitle">Características principales (cont.)</h2>
-    <ul class="product-features has-text-left">
-      <li>RTC y PMU integrados</li>
-      <li>Botones configurables</li>
-      <li>Puerto Type-C y conector GROVE</li>
-      <li>Compatible con UIFlow, MicroPython, Arduino, .NET nanoFramework</li>
-    </ul>
-
-    <h2 class="title is-4 product-subtitle">Aplicaciones (cont.)</h2>
-    <ul class="product-features has-text-left">
-      <li>Proyectos DIY</li>
-      <li>Kits de desarrollo IoT</li>
-    </ul>
-
-    <h2 class="title is-4 product-subtitle">Especificaciones</h2>
-    <ul class="product-features has-text-left">
-      <li><strong>CPU:</strong> ESP32 dual core 240MHz, 520KB SRAM</li>
-      <li><strong>Memoria Flash:</strong> 4MB</li>
-      <li><strong>Alimentación:</strong> 5V @ 500mA (USB Type-C)</li>
-      <li><strong>Conectores:</strong> GROVE (I2C/UART/IO)</li>
-      <li><strong>IMU:</strong> MPU6886</li>
-      <li><strong>RTC:</strong> BM8563</li>
-      <li><strong>PMU:</strong> AXP192</li>
-      <li><strong>Dimensiones:</strong> 48.2 x 25.5 x 13.7 mm</li>
-      <li><strong>Peso neto:</strong> 15g</li>
-      <li><strong>Rango de temperatura:</strong> 0°C a 60°C</li>
-    </ul>
-  </div>
-
-</div>
   </div>
 </section>
 
+<!-- CSS -->
+<style>
+  body {
+    background-color: #000; /* Negro a los lados */
+  }
+
+  .custom-bg {
+    background-color: #0b3d4a; /* Azul verdoso oscuro */
+    border-radius: 12px;
+    padding: 30px;
+    margin: 0 auto;
+    width: 85%; /* Franja más angosta para dejar negro en los lados */
+  }
+
+  .product-presentation {
+    color: #ddd;
+  }
+
+  .product-title {
+    color: #00ffcc; /* Verde cian como en el banner */
+  }
+</style>
+
 
   <!-- Footer -->
-  <section id="social" class="section section-3">
+  <!-- Footer -->
+  <footer class="footer" style="background-color:#1a1f2b; color:white;">
     <div class="container">
-      <div class="has-text-centered">         
-        <h3 class="title is-3">Let's Socialize</h3>
+      <div class="columns">
+
+        <!-- Columna 1 -->
+        <div class="column has-text-centered">
+          <h3 class="title is-5 has-text-white">QUIÉNES SOMOS</h3>
+          <p class="is-size-6">
+            En <strong>Namastech</strong> acercamos la ciberseguridad, gadgets y hardware 
+            al alcance de todos, combinando innovación con aprendizaje.
+          </p>
+        </div>
+
+        <!-- Columna 2 -->
+        <div class="column has-text-centered">
+          <h3 class="title is-5 has-text-white">CONTÁCTANOS</h3>
+          <p class="is-size-6">📧 contacto@namastech</p>
+          <p class="is-size-6">📱 +56 9 3558 4876</p>
+        </div>
+
+        <!-- Columna 3 -->
+        <div class="column has-text-centered">
+          <h3 class="title is-5 has-text-white">PRODUCTOS</h3>
+          <ul style="list-style:none; padding:0;">
+            <li><a href="catnugget.html" class="has-text-white">WiFi Nugget</a></li>
+            <li><a href="flipper.html" class="has-text-white">Flipper Zero</a></li>
+            <li><a href="pineapple.html" class="has-text-white">WiFi Pineapple</a></li>
+            <li><a href="portapack.html" class="has-text-white">PortaPack H2</a></li>
+          </ul>
+        </div>
+
       </div>
-      <div class="social-container columns">
-        <div class="column is-6 has-text-centered">
-          <a target="_blank" href="https://ca.linkedin.com/in/hassan-ali-6132468a">
-            <img src="/assets/img/linkedin.png">
-          </a>
-        </div>
-        <div class="column is-6 has-text-centered">
-          <a target="_blank" href="https://www.facebook.com/Hassan.Helfi">
-            <img src="/assets/img/facebook.png">
-          </a>
-        </div>
+
+      <!-- Mapa -->
+      <div class="has-text-centered" style="margin-top: 30px;">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330.4567116433087!2d-70.64848092350427!3d-33.437109495057404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c5a64024a7af%3A0x4d0773f9d3a4fe0!2sEnrique%20Mac%20Iver%20412%2C%20Santiago%2C%20Chile!5e0!3m2!1ses!2scl!4v1693939542335!5m2!1ses!2scl" 
+          width="100%" 
+          height="300" 
+          style="border:0; border-radius: 10px;" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+      </div>
+
+      <!-- Línea final -->
+      <div class="has-text-centered" style="margin-top: 20px;">
+        <p class="is-size-7">&copy; 2025 Namastech - Todos los derechos reservados</p>
       </div>
     </div>
-  </section>  
-  
-  <section class="section-4 has-text-centered container">
-    <a href="http://www.hassanali.me/about">Hassan Ali</a>
-  </section>
-
-  <!-- Styles -->
-  <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      background: black;
-      color: white;
-    }
-    .bg-video {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      min-width: 100%;
-      min-height: 100%;
-      width: auto;
-      height: auto;
-      z-index: 0;
-      transform: translate(-50%, -50%);
-      object-fit: cover;
-      opacity: 0.7;
-    }
-    .carousel {
-      position: relative;
-      overflow: hidden;
-    }
-    .carousel-images img {
-      display: none;
-      width: 100%;
-      height: auto;
-    }
-    .carousel-images img.active {
-      display: block;
-    }
-    .carousel-btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(0,0,0,0.5);
-      color: white;
-      border: none;
-      padding: 10px;
-      cursor: pointer;
-      font-size: 1.5rem;
-    }
-    .carousel-btn.prev { left: 10px; }
-    .carousel-btn.next { right: 10px; }
-  </style>
-
-  <!-- Carousel script -->
-  <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const carousels = document.querySelectorAll(".carousel");
-    carousels.forEach(carousel => {
-      const images = carousel.querySelectorAll(".carousel-images img");
-      const prevBtn = carousel.querySelector(".prev");
-      const nextBtn = carousel.querySelector(".next");
-      let currentIndex = 0;
-
-      function showImage(index) {
-        images.forEach((img, i) => {
-          img.classList.toggle("active", i === index);
-        });
-      }
-      prevBtn.addEventListener("click", () => {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        showImage(currentIndex);
-      });
-      nextBtn.addEventListener("click", () => {
-        currentIndex = (currentIndex + 1) % images.length;
-        showImage(currentIndex);
-      });
-      showImage(currentIndex);
-    });
-  });
-  </script>
-</body> 
-</html>
+  </footer>
