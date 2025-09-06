@@ -70,27 +70,6 @@
 
 <!-- Fuente robótica desde Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
-</section>
-
-<!-- Estilos integrados -->
-<style>
-.bg-video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: 0;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
-  opacity: 0.7; /* Cambia la transparencia si quieres */
-}
-</style>
-
-  <!-- Product section -->
-
 <section class="section section-product">
   <div class="product-wrapper">
     <div class="container">
@@ -100,9 +79,9 @@
         <div class="column is-6">
           <div class="carousel">
             <div class="carousel-images">
-              <img src="assets/img/products/usbduck1.webp" class="active">
-              <img src="assets/img/products/usbduck2.webp">
-              <img src="assets/img/products/usbduck3.webp">
+              <img src="assets/img/products/usbduck1.jpg" class="active">
+              <img src="assets/img/products/usbduck2.jpg">
+              <img src="assets/img/products/usbduck3.png">
             </div>
             <button class="carousel-btn prev">&#10094;</button>
             <button class="carousel-btn next">&#10095;</button>
@@ -121,22 +100,78 @@
 
           <!-- Botón de pago -->
           <div class="centered-button has-text-centered" style="margin-top: 15px;">
-            <script src="https://www.mercadopago.cl/integrations/v1/web-payment-checkout.js"
-              data-preference-id="2646395895-a12a35bd-c197-4e32-b0df-f0b144ccf009" data-source="button">
-            </script>
+<script src="https://www.mercadopago.cl/integrations/v1/web-payment-checkout.js"
+data-preference-id="2646395895-a12a35bd-c197-4e32-b0df-f0b144ccf009" data-source="button">
+</script>
           </div>
 
+          <!-- Descripción -->
           <p class="product-presentation">
             Para un humano, parece una memoria USB común.  
             Para un computador, es un teclado que escribe a velocidades sobrehumanas, permitiendo realizar los ataques hotplug más creativos y complejos.  
             Desde películas y series hasta el corazón de los profesionales de ciberseguridad, el <strong>USB Rubber Ducky</strong> es un ícono de la cultura hacker.
           </p>
+
+          <!-- Imagen centrada -->
+          <div style="text-align:center; margin:20px 0;">
+            <img src="assets/img/products/usbduck_intro.gif" alt="USB Rubber Ducky introducción" style="max-width:80%;">
+          </div>
+
+          <p class="product-presentation">
+            <strong>Inyección de Teclas</strong><br>
+            Los computadores confían en los humanos y los humanos usan teclados.  
+            El USB Rubber Ducky, que se ve como una memoria USB normal para humanos, aprovecha esta confianza para inyectar <strong>payloads</strong> a velocidades sobrehumanas.
+          </p>
+
+          <div style="text-align:center; margin:20px 0;">
+            <img src="assets/img/products/usbduck_keystroke.webp" alt="Inyección de teclas" style="max-width:80%;">
+          </div>
+
+          <p class="product-presentation">
+            <strong>Nuevo Framework de Hotplug</strong><br>
+            Herramienta probada y actualizada que revolucionó los ataques de inyección de teclas.  
+            Incluye <strong>DuckyScript™ 3.0 Avanzado</strong>, <strong>Payload Studio</strong>, extensiones reutilizables, y <strong>PayloadHub</strong> para compartir y descubrir payloads.
+          </p>
+
+          <div style="text-align:center; margin:20px 0;">
+            <img src="assets/img/products/usbduck_framework.gif" alt="Framework de Hotplug" style="max-width:80%;">
+          </div>
+
+          <p class="product-presentation">
+            <strong>Evadir Contramedidas</strong><br>
+            <strong>Clonación de ID de Hardware:</strong> imita cualquier dispositivo USB, incluyendo Vendor & Product ID, fabricante, número de serie y cadenas de producto con un solo comando.  
+            <strong>Modos de Ataque Dinámicos:</strong> cambia la emulación del dispositivo sobre la marcha para simular teclado, almacenamiento o ambos.
+          </p>
+
+          <div style="text-align:center; margin:20px 0;">
+            <img src="assets/img/products/usbduck_hw.jpg" alt="Clonación y modos dinámicos" style="max-width:80%;">
+          </div>
+
+          <p class="product-presentation">
+            <strong>Brute-Force & Educación</strong><br>
+            Testea sistemas de autenticación mediante ataques programados de fuerza bruta y aprende con cientos de payloads, guías, e-book y curso completo de 270 páginas con más de 50 ejercicios.
+          </p>
+
+          <div style="text-align:center; margin:20px 0;">
+            <img src="assets/img/products/usbduck_education.webp" alt="Educación y Payloads" style="max-width:80%;">
+          </div>
+
+          <p class="product-presentation">
+            <strong>Compatibilidad Amplia</strong><br>
+            Modernizado con USB-C y A, compatible con desktop y móviles.  
+            Retrocompatible con DuckyScript clásico, permite usar y crear cientos de payloads para aprendizaje y pruebas de seguridad.
+          </p>
+
+          <div style="text-align:center; margin:20px 0;">
+            <img src="assets/img/products/usbduck_compatibility.avif" alt="Compatibilidad USB Rubber Ducky" style="max-width:80%;">
+          </div>
         </div>
       </div>
     </div>
   </div>
+</section>
 
-        
+<!-- Script Carrusel -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const carousels = document.querySelectorAll(".carousel");
@@ -178,79 +213,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 </script>
-        <!-- Precio -->
-        
-      <!-- Info del Producto -->
-      <div class="column is-6">
-        <h1 class="title is-2 product-title">USB Rubber Ducky</h1>
-        <p class="product-presentation">
-          Para un humano, parece una memoria USB común.  
-          Para un computador, es un teclado que escribe a velocidades sobrehumanas, permitiendo realizar los ataques hotplug más creativos y complejos.  
-          Desde películas y series hasta el corazón de los profesionales de ciberseguridad, el <strong>USB Rubber Ducky</strong> es un ícono de la cultura hacker.
-        </p>
-
-        <!-- Imagen centrada -->
-        <div style="text-align:center; margin:20px 0;">
-          <img src="assets/img/products/usbduck_intro.gif" alt="USB Rubber Ducky introducción" style="max-width:80%;">
-        </div>
-
-        <p class="product-presentation">
-          <strong>Inyección de Teclas</strong><br>
-          Los computadores confían en los humanos y los humanos usan teclados.  
-          El USB Rubber Ducky, que se ve como una memoria USB normal para humanos, aprovecha esta confianza para inyectar <strong>payloads</strong> a velocidades sobrehumanas.
-        </p>
-
-        <!-- Imagen centrada -->
-        <div style="text-align:center; margin:20px 0;">
-          <img src="assets/img/products/usbduck_keystroke.webp" alt="Inyección de teclas" style="max-width:80%;">
-        </div>
-
-        <p class="product-presentation">
-          <strong>Nuevo Framework de Hotplug</strong><br>
-          Herramienta probada y actualizada que revolucionó los ataques de inyección de teclas.  
-          Incluye <strong>DuckyScript™ 3.0 Avanzado</strong>, <strong>Payload Studio</strong>, extensiones reutilizables, y <strong>PayloadHub</strong> para compartir y descubrir payloads.
-        </p>
-
-        <!-- Imagen centrada -->
-        <div style="text-align:center; margin:20px 0;">
-          <img src="assets/img/products/usbduck_framework.gif" alt="Framework de Hotplug" style="max-width:80%;">
-        </div>
-
-        <p class="product-presentation">
-          <strong>Evadir Contramedidas</strong><br>
-          <strong>Clonación de ID de Hardware:</strong> imita cualquier dispositivo USB, incluyendo Vendor & Product ID, fabricante, número de serie y cadenas de producto con un solo comando.  
-          <strong>Modos de Ataque Dinámicos:</strong> cambia la emulación del dispositivo sobre la marcha para simular teclado, almacenamiento o ambos.
-        </p>
-
-        <!-- Imagen centrada -->
-        <div style="text-align:center; margin:20px 0;">
-          <img src="assets/img/products/usbduck_hw.jpg" alt="Clonación y modos dinámicos" style="max-width:80%;">
-        </div>
-
-        <p class="product-presentation">
-          <strong>Brute-Force & Educación</strong><br>
-          Testea sistemas de autenticación mediante ataques programados de fuerza bruta y aprende con cientos de payloads, guías, e-book y curso completo de 270 páginas con más de 50 ejercicios.
-        </p>
-
-        <!-- Imagen centrada -->
-        <div style="text-align:center; margin:20px 0;">
-          <img src="assets/img/products/usbduck_education.webp" alt="Educación y Payloads" style="max-width:80%;">
-        </div>
-
-        <p class="product-presentation">
-          <strong>Compatibilidad Amplia</strong><br>
-          Modernizado con USB-C y A, compatible con desktop y móviles.  
-          Retrocompatible con DuckyScript clásico, permite usar y crear cientos de payloads para aprendizaje y pruebas de seguridad.
-        </p>
-
-        <!-- Imagen centrada -->
-        <div style="text-align:center; margin:20px 0;">
-          <img src="assets/img/products/usbduck_compatibility.avif" alt="Compatibilidad USB Rubber Ducky" style="max-width:80%;">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 
 
