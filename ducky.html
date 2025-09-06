@@ -91,21 +91,51 @@
 
   <!-- Product section -->
 
-    <section class="section section-product">
+<section class="section section-product">
   <div class="product-wrapper">
-  <div class="container">
-    <div class="columns is-vcentered">
-      <!-- Carrusel -->
-      <div class="column is-6">
-        <div class="carousel">
-          <div class="carousel-images">
-            <img src="assets/img/products/usbduck1.jpg" class="active">
-            <img src="assets/img/products/usbduck2.jpg">
-            <img src="assets/img/products/usbduck3.png">
+    <div class="container">
+      <div class="columns is-vcentered">
+        
+        <!-- Carrusel -->
+        <div class="column is-6">
+          <div class="carousel">
+            <div class="carousel-images">
+              <img src="assets/img/products/usbduck1.webp" class="active">
+              <img src="assets/img/products/usbduck2.webp">
+              <img src="assets/img/products/usbduck3.webp">
+            </div>
+            <button class="carousel-btn prev">&#10094;</button>
+            <button class="carousel-btn next">&#10095;</button>
           </div>
-          <button class="carousel-btn prev">&#10094;</button>
-          <button class="carousel-btn next">&#10095;</button>
         </div>
+
+        <!-- Info del Producto -->
+        <div class="column is-6">
+          <h1 class="title is-2 product-title">USB Rubber Ducky</h1>
+
+          <!-- Precio -->
+          <div class="product-price has-text-centered" style="margin-top: 15px;">
+            <h2 class="title is-4" style="margin-bottom: 5px;">$149.900 CLP</h2>
+            <p style="font-size: 0.9em; color: #666;">Envío gratis a todo Chile*</p>
+          </div>
+
+          <!-- Botón de pago -->
+          <div class="centered-button has-text-centered" style="margin-top: 15px;">
+            <script src="https://www.mercadopago.cl/integrations/v1/web-payment-checkout.js"
+              data-preference-id="2646395895-a12a35bd-c197-4e32-b0df-f0b144ccf009" data-source="button">
+            </script>
+          </div>
+
+          <p class="product-presentation">
+            Para un humano, parece una memoria USB común.  
+            Para un computador, es un teclado que escribe a velocidades sobrehumanas, permitiendo realizar los ataques hotplug más creativos y complejos.  
+            Desde películas y series hasta el corazón de los profesionales de ciberseguridad, el <strong>USB Rubber Ducky</strong> es un ícono de la cultura hacker.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
         
 <script>
 document.addEventListener("DOMContentLoaded", () => {
