@@ -91,24 +91,6 @@
   <!-- Product section -->
 <section class="section section-product">
   <div class="product-wrapper">
-  <div class="container">
-    <div class="columns is-vcentered">
-      <!-- Carousel -->
-      <div class="column is-6">
-        <div class="carousel">
-          <div class="carousel-images">
-            <img src="assets/img/products/m5stickplus.webp" class="active">
-            <img src="assets/img/products/m5stickplus2.webp">
-            <img src="assets/img/products/m5stickplus3.webp">
-          </div>
-          <button class="carousel-btn prev">&#10094;</button>
-          <button class="carousel-btn next">&#10095;</button>
-        </div>
-
-<!-- Fuente robótica desde Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
-<section class="section section-product">
-  <div class="product-wrapper">
     <div class="container">
       <div class="columns is-vcentered">
         
@@ -116,9 +98,9 @@
         <div class="column is-6">
           <div class="carousel">
             <div class="carousel-images">
-              <img src="assets/img/products/usbduck1.jpg" class="active">
-              <img src="assets/img/products/usbduck2.jpg">
-              <img src="assets/img/products/usbduck3.png">
+              <img src="assets/img/products/usbduck1.webp" class="active">
+              <img src="assets/img/products/usbduck2.webp">
+              <img src="assets/img/products/usbduck3.webp">
             </div>
             <button class="carousel-btn prev">&#10094;</button>
             <button class="carousel-btn next">&#10095;</button>
@@ -137,9 +119,9 @@
 
           <!-- Botón de pago -->
           <div class="centered-button has-text-centered" style="margin-top: 15px;">
-<script src="https://www.mercadopago.cl/integrations/v1/web-payment-checkout.js"
-data-preference-id="2646395895-a12a35bd-c197-4e32-b0df-f0b144ccf009" data-source="button">
-</script>
+            <script src="https://www.mercadopago.cl/integrations/v1/web-payment-checkout.js"
+              data-preference-id="2646395895-a12a35bd-c197-4e32-b0df-f0b144ccf009" data-source="button">
+            </script>
           </div>
 
           <!-- Descripción -->
@@ -207,6 +189,49 @@ data-preference-id="2646395895-a12a35bd-c197-4e32-b0df-f0b144ccf009" data-source
     </div>
   </div>
 </section>
+
+<!-- Script Carrusel -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const carousels = document.querySelectorAll(".carousel");
+
+  carousels.forEach(carousel => {
+    const images = carousel.querySelectorAll(".carousel-images img");
+    const prevBtn = carousel.querySelector(".carousel-btn.prev");
+    const nextBtn = carousel.querySelector(".carousel-btn.next");
+
+    let currentIndex = 0;
+
+    function showImage(index) {
+      images.forEach((img, i) => {
+        img.classList.toggle("active", i === index);
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(currentIndex);
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+      });
+    }
+
+    // Autoplay cada 4s
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
+    }, 4000);
+
+    showImage(currentIndex);
+  });
+});
+</script>
 
 <!-- Script Carrusel -->
 <script>
